@@ -1,0 +1,56 @@
+<view class="start-page">
+    <view class="header">
+        <view class="loading" wx:if="{{loading}}">
+            <image class="lad-img" src="../../../images/jkt/loading.png"></image>
+            <text>{{cartext}}</text>
+        </view>
+        <view class="text" wx:if="{{!loading}}">
+            <view style="font-size:40rpx;margin-bottom:60rpx;">学车第一步，选对考题库</view>
+            <view class="ok-wrap">
+                <image class="ok-img" src="../../../images/ok.png"></image>
+                <text>已为你更新至最新题库</text>
+            </view>
+            <view>科一：{{course1}}题<text wx:if="{{course4*1}}">，科四：{{course4}}题</text>
+            </view>
+        </view>
+        <image mode="widthFix" src="https://upload-images.jianshu.io/upload_images/6673460-bc716a04d5f6091c.png" style="width:750rpx;height:334rpx;background:#1bd0ad;"></image>
+    </view>
+    <view class="papers">
+        <view class="papers-view">
+            <view class="drive" style="margin-top:15px;">
+                <view class="drive-title">驾驶证</view>
+                <view class="drive-wrap">
+                    <view bindtap="cardSelect" class="dl" data-ctype="{{driveName.ctype}}" data-driveInd="{{driveInd}}" data-title="{{driveName.title}}" wx:for="{{drive}}" wx:for-index="driveInd" wx:for-item="driveName" wx:key="drive">
+                        <view class="dt">
+                            <image class="active" src="{{driveName.oksrc}}" wx:if="{{driveName.ctype==selectedCarType}}"></image>
+                            <image class="active" src="{{driveName.nosrc}}" wx:else></image>
+                        </view>
+                        <view class="dd">
+                            <view>{{driveName.title}}</view>
+                            <view class="sub_title">{{driveName.sub_title}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="drive status">
+                <view class="drive-title status-title">资格证</view>
+                <view class="drive-wrap status-wrap">
+                    <view bindtap="cardSelect" class="dl" data-ctype="{{statusName.ctype}}" data-statusInd="{{statusInd}}" data-title="{{statusName.title}}" wx:for="{{status}}" wx:for-index="statusInd" wx:for-item="statusName" wx:key="status">
+                        <view class="dt">
+                            <image class="active" src="{{statusName.oksrc}}" wx:if="{{statusName.ctype==selectedCarType}}"></image>
+                            <image class="active" src="{{statusName.nosrc}}" wx:else></image>
+                        </view>
+                        <view class="dd">
+                            <view>{{statusName.title}}</view>
+                        </view>
+                    </view>
+                    <view class="dl"></view>
+                    <view class="dl"></view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view style="height:65px;"></view>
+    <view bindtap="clickOver" class="footer">完成</view>
+</view>
+<view style="position: fixed;width: 60%;height: auto;background: rgba(0, 0, 0, .5);color: #fff;text-align: center;border-radius: 5px;line-height: 30px;left:20%;top:50%;font-size:16px;" wx:if="{{zzzToast.show}}">{{zzzToast.title}}</view>

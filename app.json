@@ -1,0 +1,88 @@
+{
+  "pages": [
+    "pages/loading/loading",
+    "pages/_index/index/index",
+    "pages/_exam/index/index",
+    "pages/_exam/start/index",
+    "pages/_exam/moni/index",
+    "pages/_exam/result/result",
+    "pages/_exam/errorpage/errorpage",
+    "pages/_exam/errorstar/errorstar",
+    "pages/_exam/grade/grade",
+    "pages/_exam/examhome/examhome",
+    "pages/_exam/exam/exam",
+    "pages/_exam/specialplay/specialplay",
+    "pages/_exam/trafficsign/trafficsign",
+    "pages/_exam/signsort/signsort",
+    "pages/_exam/signswiper/signswiper",
+    "pages/_exam/examresult/examresult",
+    "pages/_mine/feedback/feedback",
+    "pages/_index/search/search",
+    "pages/_index/gonggao/gonggao",
+    "pages/_index/liucheng/liucheng",
+    "pages/_index/xingui/xingui",
+    "pages/_index/lijian/lijian",
+    "pages/_index/jiaolianpaiming/jiaolianpaiming",
+    "pages/_index/banxing/banxing",
+    "pages/_index/jiaolian/jiaolian",
+    "pages/_index/changdi/changdi",
+    "pages/_index/gonggao/gonggao-zi/gonggao-zi",
+    "pages/_index/xingui/xingui-zi/xingui-zi",
+    "pages/_index/apply/apply",
+    "pages/_index/apply/tishi/tishi",
+    "pages/_index/apply/payment/payment",
+    "pages/_index/liucheng/driver/driver",
+    "pages/_mine/mine",
+    "pages/_mine/coach/coach",
+    "pages/_mine/receive/receive",
+    "pages/_mine/order/order",
+    "pages/_exam/sports/jiqiao/jiqiao",
+    "pages/_exam/particular/particular",
+    "pages/_mine/stocks/stocks",
+    "pages/_mine/after/after",
+    "pages/_index/apply/price/price",
+    "pages/_mine/zhuce/zhuce",
+    "pages/_mine/guanli/guanli",
+    "pages/_mine/coach/personal/personal",
+    "pages/_mine/coach/personal1/personal1",
+    "pages/_mine/coach/personal1/info_change/info_change",
+    "pages/_mine/guanli/shenhe/shenhe"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1bd0ad",
+    "navigationBarTitleText": "平安驾考",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#1bd0ad",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/_index/index/index",
+        "text": "首页",
+        "iconPath": "icons/tabBar_a.png",
+        "selectedIconPath": "icons/tabBar_aa.png"
+      },
+      {
+        "pagePath": "pages/_exam/index/index",
+        "text": "考试",
+        "iconPath": "icons/tabBar_b.png",
+        "selectedIconPath": "icons/tabBar_bb.png"
+      },
+      {
+        "pagePath": "pages/_mine/mine",
+        "text": "我的",
+        "iconPath": "icons/tabBar_d.png",
+        "selectedIconPath": "icons/tabBar_dd.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

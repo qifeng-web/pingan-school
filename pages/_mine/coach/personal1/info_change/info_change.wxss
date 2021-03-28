@@ -1,0 +1,21 @@
+button {
+  margin-bottom: 30rpx;
+}
+
+.weui-flex,button {
+  color: #fff;
+  background: #1bd0ad;
+}
+.weui-btn{
+  width:90%;
+  
+}
+.weui-flex {
+  font-size: 45rpx;
+  height: 300rpx;
+  text-align: center;
+}
+
+.title {
+  margin: 90rpx auto;
+}

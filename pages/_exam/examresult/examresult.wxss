@@ -1,0 +1,112 @@
+page {
+    height: 100%;
+    width: 100%;
+    background: #fff;
+}
+
+.header {
+    padding-top: 96rpx;
+    padding-bottom: 36rpx;
+    background: #fff;
+}
+
+.header .text {
+    position: absolute;
+    left: 150rpx;
+    top: 260rpx;
+}
+
+.header .text .text-fen {
+    font-size: 30rpx;
+}
+
+.header .text .text-fen .fen {
+    font-size: 80rpx;
+    color: #46c223;
+}
+
+.header .text .text-ji {
+    font-size: 36rpx;
+}
+
+.header .text .text-time {
+    color: #7f7f7f;
+    font-size: 30rpx;
+}
+
+.examBack {
+    padding: 20rpx 15rpx;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.examBack .left {
+    display: flex;
+}
+
+.examBack .left>view {
+    margin-left: 20rpx;
+}
+
+.examBack .left image {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.examBack .left .title {
+    font-size: 30rpx;
+}
+
+.examBack .left .title-text {
+    font-size: 26rpx;
+    color: #7f7f7f;
+    margin-top: 20rpx;
+}
+
+.examBack .right image {
+    width: 10px;
+    height: 18px;
+}
+
+button::after {
+    background: none;
+    border: none;
+}
+
+.share {
+    background: none;
+    background: #f95240;
+    width: 445rpx;
+    height: 85rpx;
+    border-radius: 40rpx;
+    line-height: 85rpx;
+    color: #fff;
+    margin-top: 35rpx;
+}
+
+.myCanvas_poster {
+    width: 750px;
+    height: 1050px;
+    position: fixed;
+    left: -1000px!important;
+    top: -1000px!important;
+    z-index: -10;
+}
+
+.myCanvas_banner {
+    width: 610px;
+    height: 480px;
+    position: fixed;
+    left: -1000px!important;
+    top: -1000px!important;
+    z-index: -10;
+}
+
+ad {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}

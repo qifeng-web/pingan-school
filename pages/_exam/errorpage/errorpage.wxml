@@ -1,0 +1,32 @@
+<view wx:if="{{errorAll[0].question_ids.length}}">
+    <view bindtap="goquestion" class="special-title" data-chapter_id="all" data-ids="{{item.question_ids}}" data-title="{{item.title}}" style="border-bottom:10px solid #f5f6f7" wx:for="{{errorAll}}" wx:key="key">
+        <view>
+            <image src="/images/test_icon1@2x.png" style="width:15px;height:15px;"></image>
+            <text>{{item.title}}</text>
+        </view>
+        <view>
+            <view class="num" style="margin-right:5px;line-height:15px;">{{item.question_ids.length}} </view>
+            <image class="direction" src="/images/jkt/right.png"></image>
+        </view>
+    </view>
+    <view bindtap="goquestion" class="special-title" data-chapter_id="{{item.chapter_id}}" data-ids="{{item.question_ids}}" data-title="{{item.title}}" wx:for="{{errorEach}}" wx:key="key">
+        <view style="display:block;">
+            <view style="display:flex;align-items: center;">
+                <view class="icon">{{index+1}}</view>
+                <text>{{item.title}}</text>
+            </view>
+            <view class="num">{{item.question_ids.length}}</view>
+        </view>
+        <view>
+            <image class="direction" src="/images/jkt/right.png"></image>
+        </view>
+    </view>
+    <view class="remove">
+        <text>答对后自动移除错题集</text>
+        <switch bindchange="switchChange" checked="{{autoRemove}}" class="switch"></switch>
+    </view>
+</view>
+<view bindtap="goOrderPlay" class="errorstat" wx:if="{{!errorAll[0].question_ids.length}}">
+    <text>你答错的题目会自动记录到这里</text>
+    <view class="button">去练习</view>
+</view>

@@ -1,0 +1,62 @@
+<view class="top">
+  <view class="top-righh">
+    <view class="weja">
+      <text>头像</text>
+      <image class="okinmg" src="{{info.image}}"></image>
+    </view>
+    <view class="weja">
+      <text>姓名</text>
+      <view class="okkla">
+        <text class="iuka">{{info.name}}</text>
+      </view>
+    </view>
+    <view class="weja">
+      <text>性别</text>
+      <text class="daww">{{sex==1?'男':'女'}}</text>
+    </view>
+  </view>
+</view>
+<view class="tops">
+  <view class="top-righh">
+    <view class="weja">
+      <text>手机</text>
+      <view class="okkla">
+        <text class="iuka">{{info.phone}}</text>
+      </view>
+    </view>
+    <view class="weja">
+      <text>身份证</text>
+      <view class="okkla">
+        <text class="iuka">{{time.idcard(idcard)}}</text>
+      </view>
+    </view>
+      <view class="weja">
+        <text>地区</text>
+        <text class="dawsw">{{info.area}}</text>
+      </view>
+  </view>
+</view>
+<view class="tops1">
+  <view class="top-righh">
+    <view class="weja">
+      <text>工作驾校</text>
+      <view class="okkla">
+        <text class="iuka">平安驾校</text>
+      </view>
+    </view>
+    <view class="weja">
+      <text>教练车牌</text>
+      <view class="okkla">
+        <text class="iuka">{{info.chepai}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="weui-cells__title">自我介绍</view>
+<view class="daiojkiw">
+  <textarea  class="yikla"  value="{{info.discription}}" disabled="true"></textarea>
+</view>
+<view bindtap="submit" class="buttoms">
+  <text>修改手机号码</text>
+</view>
+<wxs module="time" src="/components/time.wxs"></wxs>

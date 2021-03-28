@@ -1,0 +1,17 @@
+.gg-banner-wrap {
+    background: #fff;
+}
+
+.gg-banner {
+    width: 95%;
+    height: 175rpx;
+    background: skyblue;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.gg-banner image {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}

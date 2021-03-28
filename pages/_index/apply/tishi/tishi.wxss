@@ -1,0 +1,8 @@
+/* pages/apply/tishi/tishi.wxss */
+.page {
+  height: 100%;
+}
+.kong{
+  width: 100%;
+  height: 20rpx;
+}

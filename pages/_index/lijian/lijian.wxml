@@ -1,0 +1,55 @@
+<!--pages/lijian/lijian.wxml-->
+<Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange">
+  <block wx:if="{{tabs[0].isActive}}">
+    <view class="tb1-box" wx:for="{{ke}}" wx:key="index" bindtap="goto" data-url="/pages/_index/banxing/banxing">
+        <image class="uijkks" src="/icons/youhui1.png"></image>
+        <view class="uiiks">
+            <view class="poloiw">
+                <text class="uijjkw">{{item.amount}}元</text>
+                <text class="IOKLA">满{{item.enough}}元可以用</text>
+            </view>
+            <view class="uijka">
+                <text>{{time.youhui(item.start1)}} - {{time.youhui(item.end1)}}</text>
+            </view>
+        </view>
+        <view class="uikjrr">
+            <text>去使用</text>
+        </view>
+    </view>
+  </block>
+  <block wx:if="{{tabs[1].isActive}}">
+    <view class="tb1-box" wx:for="{{shiyong}}" wx:key="index">
+        <image class="uijkks" src="/icons/youhui1.png"></image>
+        <view class="uiiks">
+            <view class="poloiw">
+                <text class="uijjkw">{{item.amount}}元</text>
+                <text class="IOKLA">满{{item.enough}}元可以用</text>
+            </view>
+            <view class="uijka">
+                <text>{{time.youhui(item.start1)}} - {{time.youhui(item.end1)}}</text>
+            </view>
+        </view>
+        <view class="sss">
+            <text>已使用</text>
+        </view>
+    </view>
+  </block>
+  <block wx:if="{{tabs[2].isActive}}">
+    <view class="tb1-box" wx:for="{{guoqi}}" wx:key="index">
+        <image class="uijkks" src="/icons/poiow.png"></image>
+        <view class="uiiks">
+            <view class="poloiw">
+                <text class="iow">{{item.amount}}元</text>
+                <text class="IOKsaLA">满{{item.enough}}元可以用</text>
+            </view>
+            <view class="uijka">
+                <text>{{time.youhui(item.start1)}} - {{time.youhui(item.end1)}}</text>
+            </view>
+        </view>
+        <view class="uikwk">
+            <image class="ijklawqqq" src="/icons/huiwk.png"></image>
+        </view>
+    </view>
+  </block>
+</Tabs>
+<wxs module="time" src="/components/time.wxs"></wxs>

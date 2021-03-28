@@ -1,0 +1,29 @@
+<view class="page">
+    <view class="wrap">
+        <view>
+            <text class="title">全国通用</text>
+            <text class="car">{{use_title}}</text>
+        </view>
+        <view>
+            <text class="title">考题数量</text>
+            <text class="car">
+                <text class="blue">{{num}}</text>题目</text>
+        </view>
+        <view>
+            <text class="title">考试时间</text>
+            <text class="car">
+                <text class="blue">{{time}}</text>分钟</text>
+        </view>
+        <view>
+            <text class="title">合格标准</text>
+            <text class="car">满分<text class="blue">100</text>分, 满分<text class="blue">{{passf}}</text>分及格, </text>
+        </view>
+        <view>
+            <text class="title">出题规则</text>
+            <text class="car">按公安部规定比例随机抽取</text>
+        </view>
+        <view class="button">
+            <view bindtap="examGo" data-ind="0">全真模拟考试</view>
+        </view>
+    </view>
+</view>

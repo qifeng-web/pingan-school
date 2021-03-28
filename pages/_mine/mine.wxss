@@ -1,0 +1,253 @@
+page {
+  background-color: #F4F5F7;
+}
+
+.topImage {
+  width: 100%;
+  height: 250rpx;
+  position: absolute;
+  z-index: 0;
+}
+
+.topBG {
+  background-color: #1bd0ad;
+  height: 250rpx;
+  position: relative;
+  width: 100%;
+}
+
+.head {
+  display: flex;
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+  border: 6rpx #ffffff solid;
+  margin: 0 auto;
+  z-index: 3;
+  position: relative;
+}
+
+.name {
+  font-size: 32rpx;
+  text-align: center;
+  margin-top: 30rpx;
+  z-index: 3;
+  color: #ffffff;
+  position: relative;
+}
+
+button::after,
+button {
+  border: none;
+  background: none;
+}
+
+
+.warrant .white {
+  width: 540rpx;
+  height: 580rpx;
+  background-color: #fff;
+  border-radius: 15rpx;
+  position: fixed;
+  top: 50%;
+  left: 54%;
+  margin-left: -299.5rpx;
+  margin-top: -345rpx;
+  z-index: 1000;
+}
+
+.warrant .white .pictrue {
+  background-image: url("https://bmob-cdn-24322.bmobcloud.com/2019/07/25/f6e77de940d2441180ade9cacb7daf13.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 400rpx;
+  height: 270rpx;
+  margin: 10rpx auto 0 auto;
+}
+
+.warrant .white .tip {
+  font-size: 30rpx;
+  color: #8a8a8a;
+  text-align: center;
+  margin-top: 20rpx;
+  padding: 0 30rpx;
+}
+
+.warrant .white .tap {
+  text-align: center;
+  margin-top: 20rpx;
+  font-size: 34rpx;
+  font-weight: 600;
+}
+
+.warrant .white button {
+  width: 200rpx;
+  height: 75rpx;
+  line-height: 75rpx;
+  font-size: 30rpx;
+  border-radius: 50rpx;
+  margin-top: 70rpx;
+}
+
+.warrant .white .no {
+  background-color: #fff;
+  color: #1bd0ad;
+  border: 1rpx solid #1bd0ad;
+}
+
+.warrant .white .but {
+  background-color: #1bd0ad;
+  color: #fff;
+}
+
+.warrant .white .but::after {
+  border: none;
+}
+
+.warrant .white .but:active {
+  background-color: #1bd0ad;
+}
+
+.warrant .mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999
+}
+
+
+.my-tow {
+  width: 100%;
+  height: 262rpx;
+}
+
+.my-tow-img {
+  width: 100%;
+  height: 262rpx;
+}
+
+.my-logo {
+  width: 205rpx;
+  height: 100%;
+  margin: 0 auto;
+  position: absolute;
+  top: 0rpx;
+  left: 276rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.logo-img {
+  width: 100%;
+  height: 100%;
+}
+
+.my-top {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+  margin-left: 34rpx;
+  margin-top: 10rpx;
+  overflow: hidden;
+}
+
+.my-name {
+  width: 100%;
+  height: 70rpx;
+  font-size: 30rpx;
+  text-align: center;
+  margin-top: 20rpx;
+  color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.poiie {
+  width: 100%;
+  height: 264rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+
+.poiaie {
+  width: 100%;
+  height: 500rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+
+.oikw {
+  width: 100%;
+  height: 85rpx;
+  border-bottom: 1px solid #F4F5F7;
+  line-height: 90rpx;
+  font-size: 29rpx;
+  position: relative;
+}
+
+.dwwwq {
+  margin-left: 20rpx;
+}
+
+.iouw {
+  height: 100%;
+  position: absolute;
+  right: 20rpx;
+  top: 0rpx;
+  font-size: 25rpx;
+  color: #9E9E9E;
+}
+
+.aoiwk-img {
+  width: 28rpx;
+  height: 25rpx;
+  margin-left: 5rpx;
+}
+
+.ikjlw {
+  width: 185rpx;
+  float: left;
+  margin-left: 3rpx;
+}
+
+.ikjlw1 {
+  width: 180rpx;
+  float: left;
+  overflow: visible;
+  padding: 0 0 0 0;
+}
+
+.poklimh {
+  width: 100%;
+  height: 169rpx !important;
+  text-align: center;
+  font-size: 31rpx;
+  color: #818181;
+}
+
+.imhge {
+  width: 56rpx;
+  height: 59rpx;
+  margin-top: 39rpx;
+}
+
+.dwewetexct {
+  margin-top: 12rpx;
+}
+
+.dwewetexct1 {
+  text-align: center;
+  line-height: 40rpx;
+}
+
+.buttomaa {
+  width: 100%;
+  font-size: 21rpx;
+  text-align: center;
+  line-height: 80rpx;
+}

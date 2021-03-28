@@ -1,0 +1,428 @@
+page {
+  background-color: #f4f5f7;
+}
+
+.top {
+  width: 100%;
+}
+
+.top-t {
+  width: 100%;
+  height: 100rpx;
+  position: absolute!important;
+  top: 0rpx;
+  left: 0rpx;
+  z-index: 9999;
+}
+
+.dili {
+  padding: 20rpx;
+  font-size: 26rpx;
+  float: left;
+  margin-left: 20rpx;
+  margin-top: 17rpx;
+  line-height: 30rpx;
+  color: #fff;
+  background-color: #000;
+  opacity: 0.5;
+  border-radius: 17rpx;
+}
+
+.dili-tu {
+  width: 26rpx;
+  height: 24rpx;
+  margin-left: 17rpx;
+}
+
+.index_swiper swiper {
+  width: 750rpx;
+  height: 412rpx;
+}
+
+.index_swiper swiper image {
+  width: 100%;
+
+}
+
+.inform {
+  width: 100%;
+  height: 270rpx  !important;
+  background-color: #fff;
+  /* position: absolute !important; */
+}
+
+.inform-top {
+  width: 706rpx;
+  height: 90rpx;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: -18rpx;
+  position: relative;
+  border-radius: 8rpx;
+  box-shadow: 0 3rpx 5rpx 1rpx #ccc;
+}
+
+.tt-ldw {
+  width: 139rpx;
+  height: 42rpx;
+  background-color: #fe9602;
+  border-radius: 50rpx;
+  font-size: 23rpx;
+  color: #fff;
+  font-family: '微软雅黑';
+  text-align: center;
+  line-height: 42rpx;
+  position: absolute;
+  top: 25rpx;
+  left: 22rpx;
+}
+
+.tt-righ {
+  width: 445rpx;
+  height: 100%;
+  position: absolute;
+  right: 66rpx;
+  font-size: 24rpx;
+  line-height: 88rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.swiper_container {
+  height: 100%;
+  width: 445rpx;
+}
+
+.swiper_item {
+  width: 445rpx;
+  height: 100%;
+  position: absolute;
+  font-size: 24rpx;
+  line-height: 88rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.index_cate {
+  display: flex;
+}
+
+.index_cate navigator {
+  padding: 30rpx 0 0 40rpx;
+  flex: 1;
+}
+
+.index_cate navigator image {
+  width: 100rpx;
+}
+
+.kong {
+  height: 20rpx;
+}
+
+.box-b {
+  width: 100%;
+}
+
+.tab-one {
+  width: 100%;
+  height: 145rpx;
+  border-bottom: 1px solid #f1f1f1;
+  position: relative;
+  background-color: #fff;
+}
+
+.tb-left {
+  width: 507rpx;
+  height: 100%;
+  font-size: 26rpx;
+  position: relative;
+}
+
+
+.tb-l-top {
+  height: 50rpx;
+  position: absolute;
+  top: 32rpx;
+  margin-left: 25rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ovlkkd {
+  width: 335rpx;
+  height: 50rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tb-l-bott {
+  width: 490rpx;
+  height: 50rpx;
+  position: absolute;
+  top: 80rpx;
+  font-size: 23rpx;
+  margin-left: 25rpx;
+  color: #9d9d9d;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.colo-left {
+  margin-left: 20rpx;
+  color: red;
+}
+
+.lfeds {
+  margin-left: 20rpx;
+}
+
+
+.tb-right {
+  width: 225rpx;
+  height: 100%;
+  position: absolute;
+  top: 0rpx;
+  right: 0rpx;
+  text-align: center;
+  line-height: 150rpx;
+}
+
+.tb-buttsa {
+  width: 163rpx;
+  height: 50rpx;
+  background-color: #17b7f1;
+  border-radius: 50rpx;
+  color: #fff;
+  font-size: 25rpx;
+  line-height: 50rpx;
+  margin-left: 29rpx;
+  margin-top: 50rpx;
+}
+
+.buttda {
+  width: 100%;
+  height: 100rpx;
+  color: #3c81f4;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 25rpx;
+  position: relative;
+}
+
+.tab-one {
+  width: 100%;
+  height: 150rpx;
+  border-bottom: 1px solid #f1f1f1;
+  position: relative;
+  background-color: #fff;
+}
+
+.tb-ll {
+  width: 130rpx;
+  height: 100%;
+  position: relative;
+}
+
+.tous-img {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  position: absolute;
+  top: 23rpx;
+  right: 10rpx;
+  overflow: hidden;
+}
+
+.toux-img {
+  width: 100%;
+  height: 100%;
+}
+
+.tb-auto {
+  width: 300rpx;
+  height: 100%;
+  position: absolute;
+  top: 0rpx;
+  left: 139rpx;
+}
+
+
+.t-a-top {
+  width: 100%;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+}
+
+.t-a-a {
+  width: 100%;
+  font-size: 24rpx;
+}
+
+.xin-img {
+  width: 25rpx;
+  height: 25rpx;
+  margin-right: 10rpx;
+}
+
+.t-a-butt {
+  width: 100%;
+  font-size: 24rpx;
+  color: #6a6a6a;
+  padding-bottom: 10rpx;
+}
+
+.tb-llw {
+  width: 206rpx;
+  height: 100%;
+  position: relative;
+}
+
+.toaus-img {
+  width: 180rpx;
+  height: 100rpx;
+  position: absolute;
+  top: 23rpx;
+  right: 10rpx;
+}
+
+.tb-autso {
+  width: 300rpx;
+  height: 100%;
+  position: absolute;
+  top: 0rpx;
+  left: 225rpx;
+}
+
+.t-a-atop {
+  width: 100%;
+  font-size: 28rpx;
+  margin-top: 20rpx;
+}
+
+.t-a-aa {
+  width: 100%;
+  font-size: 22rpx;
+  color: #616161;
+  margin-top: 5rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.t-a-buatt {
+  width: 100%;
+  font-size: 21rpx;
+  color: #6a6a6a;
+  margin-top: 5rpx;
+}
+
+.tb-buttsaa {
+  width: 142rpx;
+  height: 61rpx;
+  background-color: #17b7f1;
+  border-radius: 50rpx;
+  color: #fff;
+  font-size: 25rpx;
+  line-height: 61rpx;
+  margin-left: 66rpx;
+  margin-top: 48rpx;
+}
+
+.contact {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  border:1px solid #db267e;
+  box-sizing: border-box;
+  position: fixed;
+  right: 10rpx;
+  bottom: 10rpx;
+}
+.kefu{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0rpx;
+  top: 0rpx;
+}
+
+.warrant .white {
+  width: 540rpx;
+  height: 580rpx;
+  background-color: #fff;
+  border-radius: 15rpx;
+  position: fixed;
+  top: 50%;
+  left: 54%;
+  margin-left: -299.5rpx;
+  margin-top: -345rpx;
+  z-index: 1000;
+}
+
+.warrant .white .pictrue {
+  background-image: url("https://bmob-cdn-24322.bmobcloud.com/2019/07/25/f6e77de940d2441180ade9cacb7daf13.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 400rpx;
+  height: 270rpx;
+  margin: 10rpx auto 0 auto;
+}
+
+.warrant .white .tip {
+  font-size: 30rpx;
+  color: #8a8a8a;
+  text-align: center;
+  margin-top: 20rpx;
+  padding: 0 30rpx;
+}
+
+.warrant .white .tap {
+  text-align: center;
+  margin-top: 20rpx;
+  font-size: 34rpx;
+  font-weight: 600;
+}
+
+.warrant .white button {
+  width: 200rpx;
+  height: 75rpx;
+  line-height: 75rpx;
+  font-size: 30rpx;
+  border-radius: 50rpx;
+  margin-top: 70rpx;
+}
+
+.warrant .white .no {
+  background-color: #fff;
+  color: #1bd0ad;
+  border: 1rpx solid #1bd0ad;
+}
+
+.warrant .white .but {
+  background-color: #1bd0ad;
+  color: #fff;
+}
+
+.warrant .white .but::after {
+  border: none;
+}
+
+.warrant .white .but:active {
+  background-color: #1bd0ad;
+}
+
+.warrant .mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999
+}

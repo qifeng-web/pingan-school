@@ -1,0 +1,25 @@
+<view class="box">
+    <view class="tab-one" wx:for="{{changdi}}" wx:key="_id">
+        <view class="tb-llw">
+            <view class="toaus-img">
+                <image class="toux-img" src="{{item.imgpath}}"></image>
+            </view>
+        </view>
+        <view class="tb-autso">
+            <view class="t-a-atop">
+                <text>{{item.name}}</text>
+            </view>
+            <view class="t-a-aa">
+                <text>{{item.address}}</text>
+            </view>
+            <view class="t-a-buatt">
+                <text>距离 {{item.juli}}</text>
+            </view>
+        </view>
+        <view bindtap="openLocation" class="tb-right" data-address="{{item.address}}" data-lat="{{item.lat}}" data-lng="{{item.ing}}" data-name="{{item.name}}">
+            <view class="tb-buttsaa">
+                <text>到这里</text>
+            </view>
+        </view>
+    </view>
+</view>

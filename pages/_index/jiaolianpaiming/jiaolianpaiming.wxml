@@ -1,0 +1,178 @@
+<Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange">
+  <block wx:if="{{tabs[0].isActive}}">
+    <view class="box">
+      <view class="tab-one" wx:for="{{jiaolian}}" wx:key="_id">
+        <view class="indes">
+          <view wx:if="{{index+1==1}}">
+            <image class="jl-img" src="/icons/jl1.png"></image>
+          </view>
+          <view wx:if="{{index+1==2}}">
+            <image class="jl-img" src="/icons/jl2.png"></image>
+          </view>
+          <view wx:if="{{index+1==3}}">
+            <image class="jl-img" src="/icons/jl3.png"></image>
+          </view>
+          <view wx:if="{{index+1>3}}">
+            <text>{{index+1}}</text>
+          </view>
+        </view>
+        <view class="tb-ll">
+          <view class="tous-img">
+            <image class="toux-img" src="{{item.image}}"></image>
+          </view>
+        </view>
+        <view class="tb-auto">
+          <view class="t-a-top limittext">
+            <text>{{item.title}}</text>
+          </view>
+          <view class="t-a-a">
+            <image class="xin-img"
+              src="cloud://houtai-7gazdqja690aa725.686f-houtai-7gazdqja690aa725-1304802251/jiaolian/zheng.png"
+              wx:for="{{item.starscore}}" wx:key="userInfoListId"></image>
+            <text>{{item.starscore}}分</text>
+          </view>
+          <view class="t-a-butt">
+            <text>学员{{item.count}}</text> | <text>教龄{{item.driving_age}}年</text>
+          </view>
+        </view>
+        <view class="tb-right">
+          <view class="tb-buttsa">
+            <text>约课{{item.yueke+item.count}}次</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <block wx:if="{{tabs[1].isActive}}">
+    <view class="box">
+      <view class="tab-one" wx:for="{{jiaolian1}}" wx:key="_id">
+        <view class="indes">
+          <view wx:if="{{index+1==1}}">
+            <image class="jl-img" src="/icons/jl1.png"></image>
+          </view>
+          <view wx:if="{{index+1==2}}">
+            <image class="jl-img" src="/icons/jl2.png"></image>
+          </view>
+          <view wx:if="{{index+1==3}}">
+            <image class="jl-img" src="/icons/jl3.png"></image>
+          </view>
+          <view wx:if="{{index+1>3}}">
+            <text>{{index+1}}</text>
+          </view>
+        </view>
+        <view class="tb-ll">
+          <view class="tous-img">
+            <image class="toux-img" src="{{item.image}}"></image>
+          </view>
+        </view>
+        <view class="tb-auto">
+          <view class="t-a-top limittext">
+            <text>{{item.title}}</text>
+          </view>
+          <view class="t-a-a">
+            <image class="xin-img"
+              src="cloud://houtai-7gazdqja690aa725.686f-houtai-7gazdqja690aa725-1304802251/jiaolian/zheng.png"
+              wx:for="{{item.starscore}}" wx:key="userInfoListId"></image>
+            <text>{{item.starscore}}分</text>
+          </view>
+          <view class="t-a-butt">
+            <text>学员{{item.count}}</text> | <text>教龄{{item.driving_age}}年</text>
+          </view>
+        </view>
+        <view class="tb-right">
+          <view class="tb-buttsa">
+            <text>约课{{item.yueke}}次</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <block wx:if="{{tabs[2].isActive}}">
+    <view class="box">
+      <view class="tab-one" wx:for="{{jiaolian2}}" wx:key="_id">
+        <view class="indes">
+          <view wx:if="{{index+1==1}}">
+            <image class="jl-img" src="/icons/jl1.png"></image>
+          </view>
+          <view wx:if="{{index+1==2}}">
+            <image class="jl-img" src="/icons/jl2.png"></image>
+          </view>
+          <view wx:if="{{index+1==3}}">
+            <image class="jl-img" src="/icons/jl3.png"></image>
+          </view>
+          <view wx:if="{{index+1>3}}">
+            <text>{{index+1}}</text>
+          </view>
+        </view>
+        <view class="tb-ll">
+          <view class="tous-img">
+            <image class="toux-img" src="{{item.image}}"></image>
+          </view>
+        </view>
+        <view class="tb-auto">
+          <view class="t-a-top limittext">
+            <text>{{item.title}}</text>
+          </view>
+          <view class="t-a-a">
+            <image class="xin-img"
+              src="cloud://houtai-7gazdqja690aa725.686f-houtai-7gazdqja690aa725-1304802251/jiaolian/zheng.png"
+              wx:for="{{item.starscore}}" wx:key="userInfoListId"></image>
+            <text>{{item.starscore}}分</text>
+          </view>
+          <view class="t-a-butt">
+            <text>学员{{item.count}}</text> | <text>教龄{{item.driving_age}}年</text>
+          </view>
+        </view>
+        <view class="tb-right">
+          <view class="tb-buttsa">
+            <text>约课{{item.yueke}}次</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <block wx:if="{{tabs[3].isActive}}">
+    <view class="box">
+      <view class="tab-one" wx:for="{{jiaolian3}}" wx:key="_id">
+        <view class="indes">
+          <view wx:if="{{index+1==1}}">
+            <image class="jl-img" src="/icons/jl1.png"></image>
+          </view>
+          <view wx:if="{{index+1==2}}">
+            <image class="jl-img" src="/icons/jl2.png"></image>
+          </view>
+          <view wx:if="{{index+1==3}}">
+            <image class="jl-img" src="/icons/jl3.png"></image>
+          </view>
+          <view wx:if="{{index+1>3}}">
+            <text>{{index+1}}</text>
+          </view>
+        </view>
+        <view class="tb-ll">
+          <view class="tous-img">
+            <image class="toux-img" src="{{item.image}}"></image>
+          </view>
+        </view>
+        <view class="tb-auto">
+          <view class="t-a-top limittext">
+            <text>{{item.title}}</text>
+          </view>
+          <view class="t-a-a">
+            <image class="xin-img"
+              src="cloud://houtai-7gazdqja690aa725.686f-houtai-7gazdqja690aa725-1304802251/jiaolian/zheng.png"
+              wx:for="{{item.starscore}}" wx:key="userInfoListId"></image>
+            <text>{{item.starscore}}分</text>
+          </view>
+          <view class="t-a-butt">
+            <text>学员{{item.count}}</text> | <text>教龄{{item.driving_age}}年</text>
+          </view>
+        </view>
+        <view class="tb-right">
+          <view class="tb-buttsa">
+            <text>约课{{item.yueke}}次</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</Tabs>

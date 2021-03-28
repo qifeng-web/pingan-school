@@ -1,0 +1,10 @@
+<view bindtap="sortGo" class="list" data-index="{{index}}" data-title="{{item.title}}" wx:for="{{jtlist}}" wx:key="key">
+    <view class="left">
+        <image class="icon" src="{{item.jtsrc}}"></image>
+        <text>{{item.title}}</text>
+    </view>
+    <view class="right">
+        <text>{{item.jtnum}}张</text>
+        <image class="direction" src="/images/jkt/right.png"></image>
+    </view>
+</view>

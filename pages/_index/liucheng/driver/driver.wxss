@@ -1,0 +1,70 @@
+.top {
+  width: 100%;
+  height: 150rpx;
+  text-align: center;
+  line-height: 150rpx;
+  font-weight: bold;
+  font-size: 42rpx;
+}
+
+.bo {
+  width: 100%;
+  height: 300rpx;
+  text-align: center;
+  font-size: 30rpx;
+  margin-bottom: 90rpx;
+}
+
+.bo-text {
+  width: 100%;
+  height: 100rpx;
+  color: #333333;
+}
+
+.bo-bott {
+  width: 469rpx;
+  height: 100%;
+  margin: 0 auto;
+  font-size: 25rpx;
+  color: #818181;
+}
+
+.bo-img {
+  width: 221rpx;
+  float: left;
+  margin-left: 10rpx;
+  position: relative;
+}
+
+.xctou-img {
+  width: 124rpx;
+  height: 124rpx;
+}
+
+.xctsou-img {
+  width: 74rpx;
+  height: 74rpx;
+}
+
+.mattop {
+  margin-top: 20rpx;
+}
+
+.XCimig {
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  left: 156rpx;
+}
+
+.xiayib {
+  width: 100%;
+  height: 90rpx;
+  background-color: #19B3EF;
+  position: fixed;
+  bottom: 0rpx;
+  text-align: center;
+  line-height: 90rpx;
+  font-size: 30rpx;
+  color: #fff;
+}

@@ -1,0 +1,124 @@
+page {
+  background-color: #F4F5F7;
+  padding-bottom: 100rpx;
+}
+
+.top {
+  width: 100%;
+  height: 300rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+.notice {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: right;
+  color: #707070;
+  padding-left: 510rpx;
+}
+.tops {
+  width: 100%;
+  height: 300rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+.tops1 {
+  width: 100%;
+  height: 200rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+
+.top-righh {
+  width: 687rpx;
+  height: 100%;
+  float: right;
+  margin-right: 10rpx;
+}
+
+.weja {
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 1px solid #F4F5F7;
+  font-size: 28rpx;
+  line-height: 100rpx;
+}
+
+.okinmg {
+  width: 80rpx;
+  height: 80rpx;
+  float: right;
+  margin-top: 10rpx;
+  margin-right: 20rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.dasoing {
+  width: 30rpx;
+  height: 30rpx;
+  float: right;
+  margin-top: 36rpx;
+  margin-right: 20rpx;
+}
+
+.okkla {
+  width: 400rpx;
+  height: 100%;
+  float: right;
+}
+
+.iuka {
+  position: absolute;
+  right: 30rpx;
+  height: 100rpx;
+  line-height: 109rpx;
+  font-size: 29rpx;
+  text-align: right;
+  overflow: hidden;
+  color: #A1A1A1;
+}
+
+.daww {
+  float: right;
+  margin-right: 10rpx;
+  font-size: 29rpx;
+  /* color: #A1A1A1; */
+}
+
+.diqu{
+  color:red;
+}
+.dawsw {
+  float: right;
+  margin-right: 10rpx;
+  font-size: 29rpx;
+  /* color: #5B95F7; */
+}
+
+.daiojkiw {
+  height: 350rpx;
+  background-color: #fff;
+  font-size: 30rpx;
+  padding: 31rpx;
+  margin-top: 20rpx;
+}
+
+.yikla {
+  width: 100%;
+  height: 90%;
+}
+
+.buttoms {
+  width: 100%;
+  height: 100rpx;
+  background-color: #1DACF2;
+  position: fixed;
+  bottom: 0rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #fff;
+  line-height: 100rpx;
+  z-index:999;
+}

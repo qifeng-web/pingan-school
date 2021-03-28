@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "video-list": "../pagehome/pagehome",
+    "component-banner": "../public/banner/banner"
+  }
+}

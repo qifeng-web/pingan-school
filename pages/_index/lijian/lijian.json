@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "Tabs":"../../../components/Tabs/Tabs"
+  },
+  "navigationBarTitleText": "我的优惠券"
+}

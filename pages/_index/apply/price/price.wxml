@@ -1,0 +1,16 @@
+<view bindtap="goto" class="tb1-box" wx:for="{{youhui}}" wx:key="index" data-enough="{{item.enough}}" data-amount="{{item.amount}}" data-_id="{{item._id}}">
+    <image class="uijkks" src="/icons/youhui1.png"></image>
+    <view class="uiiks">
+        <view class="poloiw">
+            <text class="uijjkw">{{item.amount}}元</text>
+            <text class="IOKLA">满{{item.enough}}元可以用</text>
+        </view>
+        <view class="uijka">
+          <text>{{time.youhui(item.start1)}} - {{time.youhui(item.end1)}}</text>
+        </view>
+    </view>
+    <view class="uikjrr">
+        <text>去使用</text>
+    </view>
+</view>
+<wxs module="time" src="/components/time.wxs"></wxs>

@@ -1,0 +1,110 @@
+/* pages/xingui/xingui.wxss */
+.index_swiper swiper {
+  width: 750rpx;
+  height: 350rpx;
+}
+
+.index_swiper swiper image {
+  width: 100%;
+
+}
+page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #F4F5F7;
+}
+
+.navbar {
+  flex: none;
+  display: flex;
+  background: #fff;
+  font-size: 30rpx;
+}
+
+.navbar .item {
+  position: relative;
+  flex: auto;
+  text-align: center;
+  line-height: 100rpx;
+}
+
+.navbar .item.active {
+  color: #3780F1;
+}
+
+.navbar .item.active:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4rpx;
+  background: #3780F1;
+}
+
+.tb1-swiper {
+  width: 100%;
+  height: 313rpx;
+}
+
+.img-top {
+  width: 100%;
+  height: 100%;
+}
+
+.tb1-box {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+
+.tb1-b-onr {
+  width: 100%;
+  height: 200rpx;
+  border-bottom: 1px solid #F4F5F7;
+  position: relative;
+}
+
+.tb1-b-img {
+  width: 253rpx;
+  height: 100%;
+}
+
+.car-img {
+  width: 230rpx;
+  height: 160rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+
+.tb1-bright {
+  width: 447rpx;
+  height: 100%;
+  position: absolute;
+  right: 25rpx;
+  top: 0rpx;
+}
+
+.tb1-b-top {
+  width: 100%;
+  height: 100rpx;
+  font-size: 27rpx;
+  margin-top: 20rpx;
+  font-weight: bold;
+}
+
+.tb1-r-but {
+  width: 100%;
+  font-size: 24rpx;
+  position: absolute;
+  bottom: 20rpx;
+  left: 0rpx;
+  color: #B5B5B5;
+}
+
+.lefdta {
+  margin-left: 20rpx;
+}

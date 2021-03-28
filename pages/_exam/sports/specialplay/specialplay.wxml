@@ -1,0 +1,39 @@
+<view class="special">
+    <view style="height:20rpx" wx:if="{{!upshow}}"></view>
+    <view class="special-one" wx:if="{{!upshow&&special_one!=''}}">
+        <view bindtap="specialEvery" class="special-list {{special_one.length%2&&index==special_one.length-1?'special-list-active':''}}" data-every="{{oneitem}}" wx:if="{{oneitem.ids.length}}" wx:for="{{special_one}}" wx:for-item="oneitem" wx:key="key">
+            <view class="left">
+                <image class="icon" src="{{oneitem.src}}"></image>
+                <text>{{oneitem.title}}</text>
+            </view>
+            <view class="right">
+                <text class="text">{{oneitem.ids.length}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="special-two" wx:if="{{!upshow&&special_two!=''}}">
+        <view bindtap="specialEvery" class="special-list {{special_two.length%2&&index==special_two.length-1?'special-list-active':''}}" data-every="{{twoitem}}" wx:for="{{special_two}}" wx:for-item="twoitem" wx:key="key2">
+            <view class="left">
+                <view class="all-color {{index>7?colorlist[index-8]:colorlist[index]}}">{{index+1}}</view>
+                <text>{{twoitem.title}}</text>
+            </view>
+            <view class="right">
+                <text class="text">{{twoitem.ids.length}}</text>
+            </view>
+        </view>
+    </view>
+    <view bindtap="signGo" class="sign" data-ind="{{index}}" wx:for="{{sign}}" wx:for-item="signitem" wx:key="key">
+        <view class="sign-title">
+            <view class="left">
+                <text>{{signitem.title}}</text>
+            </view>
+            <view class="right">
+                <text>{{signitem.num}}张</text>
+                <image class="direction" src="../../../../images/jkt/right.png"></image>
+            </view>
+        </view>
+        <view class="sign-wrap">
+            <image class="direction" src="{{srcitem}}" wx:for="{{signitem.src}}" wx:for-item="srcitem" wx:key="keysrc"></image>
+        </view>
+    </view>
+</view>

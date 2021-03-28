@@ -1,0 +1,110 @@
+page {
+  background-color: #F4F5F7;
+}
+
+.box {
+  margin-top: 20rpx;
+}
+
+.tab-one {
+  width: 100%;
+  height: 172rpx;
+  border-bottom: 1px solid #F1F1F1;
+  position: relative;
+  background-color: #fff;
+}
+
+.tb-llw {
+  width: 206rpx;
+  height: 100%;
+  position: relative;
+}
+
+.toaus-img {
+  width: 180rpx;
+  height: 131rpx;
+  background-color: palegoldenrod;
+  position: absolute;
+  top: 23rpx;
+  right: 10rpx;
+}
+
+.toux-img {
+  width: 100%;
+  height: 100%;
+}
+
+.tb-autso {
+  width: 300rpx;
+  height: 100%;
+  position: absolute;
+  top: 0rpx;
+  left: 225rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.t-a-atop {
+  width: 100%;
+  font-size: 28rpx;
+  margin-top: 26rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.t-a-aa {
+  width: 100%;
+  font-size: 22rpx;
+  color: #616161;
+  margin-top: 5rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.t-a-buatt {
+  width: 100%;
+  font-size: 22rpx;
+  color: #6A6A6A;
+  margin-top: 15rpx;
+}
+
+.tb-right {
+  width: 225rpx;
+  height: 100%;
+  position: absolute;
+  top: 0rpx;
+  right: 0rpx;
+  text-align: center;
+  line-height: 150rpx;
+}
+
+.tb-buttsa {
+  width: 163rpx;
+  height: 50rpx;
+  background-color: #17B7F1;
+  border-radius: 50rpx;
+  color: #fff;
+  font-size: 25rpx;
+  line-height: 50rpx;
+  margin-left: 29rpx;
+  margin-top: 50rpx;
+}
+
+.tb-buttsaa {
+  width: 142rpx;
+  height: 61rpx;
+  background-color: #17B7F1;
+  border-radius: 50rpx;
+  color: #fff;
+  font-size: 25rpx;
+  line-height: 61rpx;
+  margin-left: 57rpx;
+  margin-top: 61rpx;
+}
+
+.cuo {
+  font-weight: bold;
+}

@@ -1,0 +1,19 @@
+
+<view class="tab-one">
+            <view class="tb-left">
+                <view class="tb-l-top flex-row">
+                    <text class="ovlkkd">{{zu_banxing.title}}</text>
+                    <text class="colo-left">￥{{zu_banxing.price}}</text>
+                </view>
+                <view class="tb-l-bott">
+                    <text>{{zu_banxing.describe}}</text>
+                    <text class="lfeds"></text>
+                </view>
+            </view>
+            <view bindtap="hiti" class="tb-right" data-isflag="{{zu_banxing.isflag}}" data-id="{{zu_banxing.id}}"
+                data-payid="{{zu_banxing.payid}}">
+                <view class="tb-buttsa">
+                    <text>{{zu_banxing.isflag==-1?'立即报名':zu_banxing.isflag==0?'去付款':zu_banxing.isflag==1?'已报名':zu_banxing.isflag==2?'审核中':zu_banxing.isflag==3?'已取消':zu_banxing.isflag==4?'待退款':zu_banxing.isflag==5?'已退款':'已完成'}}</text>
+                </view>
+            </view>
+        </view>

@@ -1,0 +1,16 @@
+<view bindtap="del_mark" class="share-mark" wx:if="{{markShow}}"></view>
+<view class="share-mark-wrap {{markShow?'upgo':'downgo'}}">
+    <view class="share-mark-top">
+        <view bindtap="save_img">
+            <image src="http://picture.eclicks.cn/kaojiazhao/public/wx_xcx/grade/friends.png"></image>
+            <view>朋友圈</view>
+        </view>
+        <view bindtap="del_mark">
+            <button openType="share">
+                <image src="http://picture.eclicks.cn/kaojiazhao/public/wx_xcx/grade/good_friend.png"></image>
+            </button>
+            <view>微信好友</view>
+        </view>
+    </view>
+    <view bindtap="del_mark" class="share-mark-bottom">取消</view>
+</view>

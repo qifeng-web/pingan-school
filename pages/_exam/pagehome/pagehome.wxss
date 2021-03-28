@@ -1,0 +1,120 @@
+.container {
+  background: #fff;
+  font-size: 0;
+}
+
+.video-content {
+  padding: 17rpx 30rpx;
+}
+
+.plate-title {
+  font-size: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  margin-top: 18rpx;
+}
+
+.plate-title image {
+  width: 32rpx;
+  height: 32rpx;
+  vertical-align: middle;
+}
+
+.plate-title text {
+  vertical-align: middle;
+  margin-left: 24rpx;
+}
+
+.video-item {
+  position: relative;
+  margin-top: 36rpx;
+  font-size: 0;
+}
+
+.video-item+.video-item {
+  margin-top: 44rpx;
+}
+
+.video-poster {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10rpx;
+}
+
+.video-poster image {
+  width: 216rpx;
+  height: 136rpx;
+}
+
+.video-poster .shade {
+  color: #fff;
+  font-size: 22rpx;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 34rpx;
+  background: linear-gradient(bottom,rgba(0,0,0,0.5),rgba(0,0,0,0));
+}
+
+.video-poster .shade text {
+  margin-left: 15rpx;
+}
+
+.video-info {
+  display: inline-block;
+  vertical-align: top;
+  position: absolute;
+  left: 250rpx;
+  right: 0;
+  height: 136rpx;
+}
+
+.video-info .title {
+  font-size: 32rpx;
+  line-height: 32rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.video-info .official::before {
+  content: '新规';
+  width: 60rpx;
+  height: 32rpx;
+  border-bottom-right-radius: 16rpx;
+  border-top-left-radius: 16rpx;
+  background: linear-gradient(131deg,#3ec2fe,#07a9f2);
+  color: #fff;
+  display: inline-block;
+  font-size: 20rpx;
+  text-align: center;
+  line-height: 32rpx;
+  vertical-align: top;
+  margin-right: 14rpx;
+}
+
+.video-info .summary {
+  font-size: 26rpx;
+  line-height: 26rpx;
+  margin-top: 22rpx;
+  color: #929292;
+}
+
+.video-info .difficulty {
+  margin-top: 28rpx;
+  font-size: 24rpx;
+}
+
+.video-info .difficulty text {
+  vertical-align: middle;
+  margin-right: 14rpx;
+}
+
+.video-info .difficulty image {
+  vertical-align: middle;
+  width: 26rpx;
+  height: 25rpx;
+}

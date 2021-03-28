@@ -1,0 +1,32 @@
+.top {
+  width: 100%;
+  height: 200rpx;
+  background-color: #fff;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.t-top {
+  width: 670rpx;
+  margin: 0 auto;
+  font-size: 35rpx;
+  padding-top: 36rpx;
+}
+
+.t-butt {
+  width: 670rpx;
+  margin: 0 auto;
+  font-size: 25rpx;
+  margin-top: 22rpx;
+  color: #a9a9a9;
+}
+
+.boxda {
+  font-size: 25rpx;
+  margin-top: 65rpx;
+  color: #636363;
+  padding: 20rpx;
+}
+
+.mar-left {
+  margin-left: 40rpx;
+}

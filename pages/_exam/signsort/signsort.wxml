@@ -1,0 +1,10 @@
+<page>
+    <view class="sort">
+        <view bindtap="sortGo" class="srotlist" data-sortdownind="{{index}}" wx:for="{{srotdown}}" wx:key="key">
+            <view>
+                <image lazyLoad="true" mode="aspectFill" src="http://picture.eclicks.cn/kaojiazhao/public/traffic_marks/{{item.image}}"></image>
+            </view>
+            <view class="text"> {{item.title}} </view>
+        </view>
+    </view>
+</page>

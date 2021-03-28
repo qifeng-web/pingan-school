@@ -1,0 +1,61 @@
+<view class="wrap">
+  <view class="circle-box topBG">
+    <image class="topImage" src="https://bmob-cdn-24322.bmobcloud.com/2019/05/27/3cb30f6c407826b2806965251bd6dc60.png"></image>
+    <view class="circle-left">
+      <view class="circle-left-title">{{rankwa}}</view>
+      <view class="circle-left-content">
+        <text>{{rankfs}}</text> 分</view>
+    </view>
+    <view class="circle-right">
+      <view class="circle-right-header">
+        <view>
+          <image src="{{userInfo.avatarUrl}}"></image>
+        </view>
+      </view>
+      <view class="circle-right-content">{{userInfo.nickName}}</view>
+    </view>
+  </view>
+  <view class="down">
+    <view class="all">
+      <view>
+        <view>
+          <text>{{addupexam}}</text>次</view>
+        <view class="view-title">累计考试</view>
+      </view>
+      <view>
+        <view>
+          <text>{{pass}}</text>次</view>
+        <view class="view-title">及格次数</view>
+      </view>
+      <view>
+        <view>
+          <text>{{addup_t}}</text>题</view>
+        <view class="view-title">累计答题</view>
+      </view>
+    </view>
+  </view>
+  <view class="wraplist">
+    <view class="top">
+      <text></text>
+      <view>历史成绩</view>
+    </view>
+    <view class="list" wx:if="{{list}}" wx:for="{{list}}" wx:key="key">
+      <text class="{{item.code>=90?'colorbule':'colororange'}}">{{item.code}}<text class="span">分</text>
+      </text>
+      <text>{{item.time}}</text>
+      <text>{{item.date}}</text>
+      <text class="{{item.code>=90?'colorbule':'colororange'}}">{{item.rank}}</text>
+    </view>
+    <view class="default" wx:if="{{list==''}}">
+      暂无记录
+    </view>
+  </view>
+</view>
+<button bindtap="go_show_mark" class="flex-icon share">
+  <image src='/images/share.png' style='width:35rpx;height:32rpx;'></image>
+  分享好友
+</button>
+<canvas canvasId="myCanvas" class="myCanvas_banner"></canvas>
+<canvas canvasId="myCanvas_grade_poster" class="myCanvas_grade_poster"></canvas>
+<component-tag-share bindmyevent="onMyEvent" markShow="{{markShow}}"></component-tag-share>
+<component-tag-alert alertShow="{{alertShow}}" bindmyevent="_fn_alertShow"></component-tag-alert>

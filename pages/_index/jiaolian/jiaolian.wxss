@@ -1,0 +1,89 @@
+page {
+  background-color: #F4F5F7;
+}
+
+.box {
+  margin-top: 20rpx;
+}
+
+.tab-one {
+  width: 100%;
+  height: 145rpx;
+  border-bottom: 1px solid #F1F1F1;
+  position: relative;
+  background-color: #fff;
+}
+
+.tb-ll {
+  width: 130rpx;
+  height: 100%;
+  position: relative;
+}
+
+.tous-img {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  position: absolute;
+  top: 23rpx;
+  right: 10rpx;
+  overflow: hidden;
+}
+
+.toux-img {
+  width: 100%;
+  height: 100%;
+}
+
+.tb-auto {
+  width: 300rpx;
+  height: 100%;
+  position: absolute;
+  top: 0rpx;
+  left: 139rpx;
+}
+
+.t-a-top {
+  width: 100%;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+}
+
+.t-a-a {
+  width: 100%;
+  font-size: 24rpx;
+}
+
+.xin-img {
+  width: 25rpx;
+  height: 25rpx;
+  margin-right: 10rpx;
+}
+
+.t-a-butt {
+  width: 100%;
+  font-size: 24rpx;
+  color: #6A6A6A;
+}
+
+.tb-right {
+  width: 225rpx;
+  height: 100%;
+  position: absolute;
+  top: 0rpx;
+  right: 0rpx;
+  text-align: center;
+  line-height: 150rpx;
+}
+
+.tb-buttsa {
+  width: 163rpx;
+  height: 50rpx;
+  background-color: #17B7F1;
+  border-radius: 50rpx;
+  color: #fff;
+  font-size: 25rpx;
+  line-height: 50rpx;
+  margin-left: 29rpx;
+  margin-top: 50rpx;
+}

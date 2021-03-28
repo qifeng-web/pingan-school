@@ -1,0 +1,68 @@
+<!-- 查询框 -->
+<view class="top">
+  <view class="top-t">
+    <view class="t-tr">
+      <input bindinput="bindinput" class="inpit" focus="{{focus}}" placeholder="输入要搜索的班型, 教练"
+        placeholderStyle="color:#fff;"></input>
+      <view bindtap="search" class="serch">
+        <icon color="#fff" size="20" type="search"></icon>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 班型 -->
+<view class="fontla" wx:if="{{goodList.length>0}}">
+  <text>班型</text>
+</view>
+<!-- 班型栏 -->
+<view class="box">
+  <view class="tab-one" wx:for="{{goodList}}" wx:key="_id">
+    <view class="tb-left">
+      <view class="tb-l-top flex-row">
+        <text class="ovlkkd">{{item.title}}</text>
+        <text class="colo-left">￥{{item.price}}</text>
+      </view>
+      <view class="tb-l-bott">
+        <text>{{item.describe}}</text>
+        <text class="lfeds"></text>
+      </view>
+    </view>
+    <view bindtap="hiti" class="tb-right" data-id="{{item._id}}" data-isflag="{{item.isflag}}">
+      <view class="tb-buttsa">
+        <text>{{item.isflag==-1?'立即报名':item.isflag==0?'去付款':item.isflag==1?'已报名':item.isflag==2?'审核中':item.isflag==3?'已取消':item.isflag==4?'待退款':'已退款'}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="fontla" wx:if="{{goodList1.length>0}}">
+  <text>教练</text>
+</view>
+<view class="box">
+  <view class="tab-one" wx:for="{{goodList1}}" wx:key="_id">
+    <view class="tb-ll">
+      <view class="tous-img">
+        <image class="toux-img" src="{{item.image}}"></image>
+      </view>
+    </view>
+    <view class="tb-auto">
+      <view class="t-a-top">
+        <text>{{item.title}}</text>
+      </view>
+      <view class="t-a-a">
+        <image class="xin-img"
+          src="cloud://houtai-7gazdqja690aa725.686f-houtai-7gazdqja690aa725-1304802251/jiaolian/zheng.png"
+          wx:for="{{item.starscore}}" wx:key="userInfoListId"></image>
+        <text>{{item.starscore}}分</text>
+      </view>
+      <view class="t-a-butt">
+        <text>学员{{item.count}}</text> |
+        <text>教龄{{item.driving_age}}年</text>
+      </view>
+    </view>
+    <view bindtap="goto" class="tb-right">
+      <view class="tb-buttsa">
+        <text>立即约课</text>
+      </view>
+    </view>
+  </view>
+</view>

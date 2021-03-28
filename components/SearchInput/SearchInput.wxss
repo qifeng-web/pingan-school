@@ -1,0 +1,24 @@
+.search_input{
+  width: 520rpx;
+  height: 70rpx;
+  background-color: #000;
+  float: right;
+  margin-right: 22rpx;
+  margin-top: 17rpx;
+  font-size: 27rpx;
+  border-radius: 50rpx;
+  opacity: 0.5;
+}
+.search_input navigator {
+  height: 70rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15rpx; 
+  color: #f4f5f7;
+} 
+.serch {
+  position: absolute;
+  top: 33rpx;
+  right: 64rpx;
+}

@@ -1,0 +1,23 @@
+<view class="page" data-weui-theme="{{theme}}">
+	<view class="weui-msg">
+		<view class="weui-msg__icon-area"><i class="weui-icon-success weui-icon_msg"></i></view>
+		<view class="weui-msg__text-area">
+			<h2 class="weui-msg__title">报名成功</h2>
+			<view class="weui-msg__desc">您的报名信息如下表，请重新确认信息。如若无误请点击下方去付款按钮。</view>
+			<view class="weui-msg__custom-area">
+				<view class="weui-list-tips">
+					<text class="weui-list-tips__item" decode>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：{{name}}</text>
+					<view class="kong"></view>
+					<text class="weui-list-tips__item" decode>手&nbsp;机&nbsp;号&nbsp;码：{{phone}}</text>
+					<view class="kong"></view>
+					<text class="weui-list-tips__item" decode>身份证号码：{{idcard}}</text>
+				</view>
+			</view>
+		</view>
+		<view class="weui-msg__opr-area">
+			<view class="weui-btn-area">
+				<a href="javascript:history.back();" class="weui-btn weui-btn_primary" bindtap="dianji">去付款</a>
+			</view>
+		</view>
+	</view>
+</view>

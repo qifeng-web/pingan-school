@@ -1,0 +1,78 @@
+@import "/icon-font.wxss";
+.weui-vcode-img{width:108px}
+._jl{
+  padding-top: 30rpx;
+  width: 40%;
+  margin: auto;
+}
+.dwwpow {
+  width: 100%;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  color: #fff;
+  position: fixed;
+  bottom: 0rpx;
+  /* background-color: #1daeef; */
+}
+.yanzhengma {
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  
+.yanzhengma .left {
+  font-family: Arial;
+  font-style: italic;
+  font-weight: bold;
+  border: 0;
+  letter-spacing: 3px;
+  font-size: 18px;
+  background-color: #ccc;
+  padding: 10rpx;
+  margin-right: 20rpx;
+  color: blue;
+}
+
+.imageList {
+  /* height: 450rpx; */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.imageWrap {
+  margin: 10rpx;
+  width: 230rpx;
+  height: 230rpx;
+  border: 1px dashed #707070;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 230rpx;
+  position: relative;
+}
+.imageWrap .close {
+  position: absolute;
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  background-color: #000;
+  color: white;
+  opacity: 0.5; 
+  top: 0;
+  right: 0;
+  font-size: 50rpx;
+  box-sizing: border-box;
+}
+.imageWrap image {
+  width: 100%;
+  height: 100%;
+}
+.icon-add {
+  color: #707070;
+  font-size: 80rpx;
+}
+.page{
+  padding-bottom: 150rpx;
+}

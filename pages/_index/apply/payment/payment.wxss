@@ -1,0 +1,59 @@
+page {
+  background-color: #f4f5f7;
+}
+
+.top {
+  background-color: #fff;
+  padding: 25rpx;
+  font-size: 28rpx;
+  line-height: 65rpx;
+  margin-top: 20rpx;
+  color: #7c7c7c;
+  border-bottom: 1rpx solid #f4f5f7;
+}
+
+.toap {
+  background-color: #fff;
+  padding: 25rpx;
+  font-size: 28rpx;
+  line-height: 65rpx;
+  color: #7c7c7c;
+  border-bottom: 1rpx solid #f4f5f7;
+}
+
+.margijlk {
+  float: right;
+  font-size: 25rpx;
+  color: #444;
+}
+
+.colwe {
+  color: #fe6870;
+}
+
+.you {
+  width: 27rpx;
+  height: 27rpx;
+  float: right;
+  margin-top: 20rpx;
+}
+
+.mari {
+  margin-right: 10rpx;
+}
+
+.iokla {
+  font-size: 31rpx;
+}
+
+.bottio {
+  width: 100%;
+  height: 100rpx;
+  background-color: #1bb1f0;
+  position: fixed;
+  bottom: 0rpx;
+  text-align: center;
+  line-height: 100rpx;
+  color: #fff;
+  font-size: 30rpx;
+}

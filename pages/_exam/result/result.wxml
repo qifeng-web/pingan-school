@@ -1,0 +1,50 @@
+<view class="wrap">
+  <view class="circle-box">
+    <image class="bg" src="/images/jd-bg.jpg"></image>
+    <view class="dati-top" wx:if="{{isplay}}">本次共答{{everyDay_all}}题</view>
+    <view class="dati-top" wx:if="{{!isplay}}">{{yc_text}}</view>
+    <canvas canvasId="canvasCircle1" class="circle" style="width:108px; height:108px;"></canvas>
+    <canvas canvasId="canvasArcCir" class="circle" style="width:108px; height:108px;"></canvas>
+    <view class="draw_btn" wx:if="{{isplay}}">
+      <view class="title">{{everyDay_bfs}}%</view>
+      <view class="ok">正确率</view>
+    </view>
+    <view class="draw_btn draw_top" wx:if="{{!isplay}}">
+      <view class="title"></view>
+      <view class="title">{{bfh}}分</view>
+    </view>
+    <view class="down">
+      <view class="subject"> {{yc_text}}：
+        <text wx:if="{{isplay}}">{{everyDay_bfs}}</text>
+        <text wx:if="{{!isplay}}">{{bfh}}</text> 分
+      </view>
+      <view class="all" wx:if="{{isplay}}">
+        <text>累计共答 <text class="orange">{{afterall}}</text> 题</text> |
+        <text>剩余未做 <text class="orange">{{all-afterall}}</text> 题</text>
+      </view>
+      <view class="all" wx:if="{{!isplay}}">
+        <text>答题进度<text class="orange">{{question_jindu}}</text>%</text> |
+        <text>答题正确率 <text class="orange">{{bfh}}</text>%</text>
+      </view>
+    </view>
+    <!-- <button bindtap="go_show_mark" class="share" wx:if="{{isplay}}">{{down_text}}</button> -->
+    <button class="share" openType="share">炫耀一下</button>
+  </view>
+  <image mode="widthFix" src="../../../images/jn.jpg" style="width:100%;" wx:if="{{bfh==100||!everyDay_error&&isplay}}"></image>
+  <view style="height:60rpx;background:#fff" wx:if="{{bfh!=100}}"></view>
+  <view bindtap="goError" class="errorgo" wx:if="{{everyDay_error&&isplay}}">
+    <view class="erroe-left">
+      <view>本次答错
+        <text>{{everyDay_error}}</text>题</view>
+      <view class="wenb">现在巩固，更有利于记忆哟</view>
+    </view>
+    <view class="erroe-right">巩固错题</view>
+  </view>
+  <view bindtap="goError" class="errorgo" wx:if="{{bfh!=100&&!isplay}}">
+    <view class="erroe-left">
+      <view>查看错题</view>
+      <view class="wenb">已为你整理{{error}}道错题</view>
+    </view>
+    <view class="erroe-right">巩固错题</view>
+  </view>
+</view>

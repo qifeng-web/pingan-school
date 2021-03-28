@@ -1,0 +1,77 @@
+button::after {
+    border: 0;
+}
+
+.share-mark {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 99999999;
+}
+
+.share-mark-wrap {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    width: 100%;
+    overflow: hidden;
+    z-index: 9999999999;
+}
+
+.share-mark-top {
+    width: 100%;
+    height: 252rpx;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #f2f2f2;
+}
+
+.share-mark-top>view {
+    width: 30%;
+    text-align: center;
+    color: #414141;
+    font-size: 30rpx;
+}
+
+.share-mark-top button {
+    width: 100rpx;
+    height: 100rpx;
+    padding: 0;
+}
+
+.share-mark-top button+view {
+    margin-top: 8rpx;
+}
+
+.share-mark-top image {
+    width: 100rpx;
+    height: 100rpx;
+}
+
+.share-mark-bottom {
+    text-align: center;
+    line-height: 86rpx;
+    color: #4d4d4d;
+    font-size: 30rpx;
+}
+
+.downgo {
+    height: 0;
+    transform: translateY(252rpx);
+    transition: all 0.5s ease;
+}
+
+.upgo {
+    height: 338rpx;
+    transform: translateY(0);
+    transition: all 0.5s ease;
+}
+
+.button {
+    background: none;
+}

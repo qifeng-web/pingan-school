@@ -1,0 +1,44 @@
+.special {
+    background: #f2f2f2;
+    height: 100%;
+}
+.sign {
+    border-bottom: 1px solid #ebebeb;
+    background: #fff;
+    padding-bottom: 28rpx;
+}
+
+.sign-title {
+    font-size: 30rpx;
+    color: #000;
+    background: #fff;
+    padding: 30rpx 24rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sign-title .right image {
+    width: 15rpx;
+    height: 27rpx;
+    margin-left: 15rpx;
+}
+
+.sign-title .right {
+    color: #4d4d4d;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.sign-wrap {
+    display: flex;
+    margin-left: 24rpx;
+    margin-right: 24rpx;
+}
+
+.sign-wrap image {
+    width: 89rpx;
+    height: 89rpx;
+    margin-right: 65rpx;
+}

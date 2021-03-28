@@ -1,0 +1,145 @@
+<view class="center-wrap topBG">
+    <view class="topBG">
+        <image class="topImage"
+            src="https://bmob-cdn-24322.bmobcloud.com/2019/05/27/3cb30f6c407826b2806965251bd6dc60.png"></image>
+        <view wx:if="{{userInfo.avatarurl}}">
+            <image class="head" src="{{userInfo.avatarurl}}"></image>
+            <view class="name">{{userInfo.nickName}}</view>
+        </view>
+        <button hover-class='none' bindtap='login' style='background-color:transparent;' wx:else>
+            <view>
+                <image class='head' style='z-index:9;' src='/images/header.png'></image>
+                <view class="name">点击登录</view>
+            </view>
+        </button>
+    </view>
+</view>
+<view class="poiie">
+    <view bindtap="goto2" class="oikw" data-id="0" data-url="/pages/_mine/order/order">
+        <text class="dwwwq">我的订单</text>
+        <view class="iouw">
+            <text>全部订单</text>
+            <image class="aoiwk-img" src="/icons/jiantou.png"></image>
+        </view>
+    </view>
+    <view bindtap="goto2" class="ikjlw" data-id="1" data-url="/pages/_mine/order/order">
+        <view class="poklimh">
+            <image class="imhge" src="/icons/my-1.png"></image>
+            <view class="dwewetexct">
+                <text>待付款</text>
+            </view>
+        </view>
+    </view>
+    <view bindtap="goto2" class="ikjlw" data-id="2" data-url="/pages/_mine/order/order">
+        <view class="poklimh">
+            <image class="imhge" src="/icons/my-2.png"></image>
+            <view class="dwewetexct">
+                <text>待审核</text>
+            </view>
+        </view>
+    </view>
+    <view bindtap="goto3" class="ikjlw" data-url="/pages/_mine/stocks/stocks">
+        <view class="poklimh">
+            <image class="imhge" src="/icons/my-3.png"></image>
+            <view class="dwewetexct">
+                <text>已完成</text>
+            </view>
+        </view>
+    </view>
+    <view bindtap="goto" class="ikjlw" data-url="/pages/_mine/after/after">
+        <view class="poklimh">
+            <image class="imhge" src="/icons/my-4.png"></image>
+            <view class="dwewetexct">
+                <text>售后</text>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="poiaie">
+    <view class="oikw">
+        <text class="dwwwq">我的服务</text>
+    </view>
+    <view bindtap="Aboutclass1" class="ikjlw">
+        <view class="poklimh">
+            <image class="imhge" src="/icons/coach.png"></image>
+            <view class="dwewetexct">
+                <text>我的教练</text>
+            </view>
+        </view>
+    </view>
+    <view bindtap="Aboutclass" class="ikjlw">
+        <view class="poklimh">
+            <image class="imhge" src="/icons/my-6.png"></image>
+            <view class="dwewetexct">
+                <text>我的约课</text>
+            </view>
+        </view>
+    </view>
+    <view bindtap="goto1" class="ikjlw" data-url="/pages/_mine/receive/receive">
+        <view class="poklimh">
+            <image class="imhge" src="/icons/ijkls.png"></image>
+            <view class="dwewetexct">
+                <text>领取优惠券</text>
+            </view>
+        </view>
+    </view>
+    <view bindtap="coupon" class="ikjlw">
+        <view class="poklimh">
+            <image class="imhge" src="/icons/my-7.png"></image>
+            <view class="dwewetexct">
+                <text>我的优惠券</text>
+            </view>
+        </view>
+    </view>
+    <view bindtap="coach" class="ikjlw">
+        <view class="poklimh">
+            <image class="imhge" src="/icons/my-9.png"></image>
+            <view class="dwewetexct">
+                <text>教练入口</text>
+            </view>
+        </view>
+    </view>
+    <button class="ikjlw1" openType="share">
+        <view class="ikjlw1">
+            <view class="poklimh">
+                <image class="imhge" src="/icons/fenxiang.png"></image>
+                <view class="dwewetexct1">
+                    分享好友
+                </view>
+            </view>
+        </view>
+    </button>
+    <view bindtap="goto" class="ikjlw" data-url="/pages/_mine/feedback/feedback">
+        <view class="poklimh">
+            <image class="imhge" src="/icons/fankui.png"></image>
+            <view class="dwewetexct">
+                <text>意见反馈</text>
+            </view>
+        </view>
+    </view>
+    <view bindtap="about" class="ikjlw">
+        <view class="poklimh">
+            <image class="imhge" src="/icons/about.png"></image>
+            <view class="dwewetexct">
+                <text>关于我们</text>
+            </view>
+        </view>
+    </view>
+
+</view>
+<view class="buttomaa">
+    <text>版权信息</text>
+</view>
+<view class="warrant" wx:if="{{!is_login}}">
+    <view class='white'>
+        <view class='tap'>您还未登录</view>
+        <view class='tip'>请先登录再进行操作</view>
+        <view class='pictrue'></view>
+        <view style='display:flex;'>
+            <button class='no' type="primary" bindtap='login' lang="zh_CN">暂不登录</button>
+            <button class='but' type="primary" open-type="getUserInfo" lang="zh_CN"
+                bindgetuserinfo="bindgetuserinfo">立即登录</button>
+        </view>
+    </view>
+    <view class='mask'></view>
+</view>

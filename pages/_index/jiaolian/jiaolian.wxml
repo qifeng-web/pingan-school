@@ -1,0 +1,26 @@
+<view class="box">
+    <view class="tab-one" wx:for="{{jiaolian}}" wx:key="_id">
+        <view class="tb-ll">
+            <view class="tous-img">
+                <image class="toux-img" src="{{item.image}}"></image>
+            </view>
+        </view>
+        <view class="tb-auto">
+            <view class="t-a-top limittext">
+                <text>{{item.title}}</text>
+            </view>
+            <view class="t-a-a">
+                <image class="xin-img" src="https://qaz.ibangit.com/Public/img/xin.png" wx:for="{{item.starscore}}" wx:key="userInfoListId"></image>
+                <text>{{item.starscore}}分</text>
+            </view>
+            <view class="t-a-butt">
+                <text>学员{{item.count}}</text> | <text>教龄{{item.driving_age}}年</text>
+            </view>
+        </view>
+        <view bindtap="goto" class="tb-right">
+            <view class="tb-buttsa">
+                <text>立即约课</text>
+            </view>
+        </view>
+    </view>
+</view>

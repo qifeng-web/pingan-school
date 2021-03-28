@@ -1,0 +1,113 @@
+<Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange">
+  <block wx:if="{{tabs[0].isActive}}">
+    <view class="box">
+      <view class="forbox" wx:for="{{info}}" wx:key="index">
+        <view class="f-b-top">
+          <view class="uijkw">
+            <view class="tous-img">
+              <image class="toux-img" src="{{item.avatarurl}}"></image>
+            </view>
+            <view class="tong">
+              <view class="t-a-top">
+                <text>{{item.name}}</text>
+              </view>
+              <view class="t-bb-font">
+                <text>{{item.title}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="f-zopa">
+          <view>
+            <text>下单时间</text>
+            <text class="rigto">{{time.gettime(item.time)}}</text>
+          </view>
+          <view>
+            <text>实际支付金额</text>
+            <text class="rigto">￥ {{item.now}}</text>
+          </view>
+          <view>
+            <text>联系人</text>
+            <text class="rigto">{{item.name}}</text>
+          </view>
+          <view>
+            <text>手机号</text>
+            <text class="rigto">{{item.phone}}</text>
+          </view>
+        </view>
+        <view class="f-boorr">
+          <view class="uijka">
+            <text>订单待审核</text>
+          </view>
+          <view class="iokwela">
+            <text>通过审核</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <block wx:if="{{tabs[1].isActive}}">
+    <view class="box">
+      <view class="forbox" wx:for="{{jiao}}" wx:key="index">
+        <view class="f-b-top">
+          <view class="uijkw">
+            <view class="tous-img">
+              <image class="toux-img" src="{{item.avatarurl}}"></image>
+            </view>
+            <view class="tong">
+              <view class="t-a-top">
+                <text>{{item.name}}</text>
+              </view>
+              <view class="t-bb-font">
+                <text>{{item.jl==true?'教练':''}}</text>
+                <text>{{item.jl==true&&item.gly==true?' & ':''}}</text>
+                <text>{{item.gly==true?'管理员':''}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="f-zopa">
+          <view>
+            <text>注册时间</text>
+            <text class="rigto">{{time.gettime(item.time)}}</text>
+          </view>
+          <view>
+            <text>手机号</text>
+            <text class="rigto">{{item.phone}}</text>
+          </view>
+          <view>
+            <text>身份证号码</text>
+            <text class="rigto">{{item.idcard}}</text>
+          </view>
+        </view>
+        <view class="imageList">
+          <block wx:for="{{item.photo}}" wx:key="id" wx:for-index="id1">
+            <view class="imageWrap">
+              <image src="{{item}}" data-src="{{item}}" mode="aspectFill" id="{{index}}"
+                bindtap="_handlerPreviewImage" />
+            </view>
+          </block>
+        </view>
+        <view class="f-boorr" wx:if="{{item.jl}}">
+          <view class="uijka">
+            <text>教练审核</text>
+          </view>
+          <view class="iokwela" bindtap="jl" data-name="{{item.name}}" id="{{index}}">
+            <text>点击审核</text>
+          </view>
+        </view>
+        <view class="f-boorr" wx:if="{{item.gly}}">
+          <view class="uijka">
+            <text>管理员审核</text>
+          </view>
+          <view class="iokwela" bindtap="gly" data-name="{{item.name}}" id="{{index}}">
+            <text>点击审核</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </block>
+</Tabs>
+
+<wxs module="time" src="/components/time.wxs"></wxs>

@@ -1,0 +1,15 @@
+<view id="{{item._id}}" bindtap="goto" class="iujaaq"  wx:for="{{gonggao}}" wx:key="index" >
+    <view class="row-between section">
+        <view>
+            <view class="flex-row">
+                <view class="sec-name">{{item.title}}</view>
+            </view>
+            <view class="sec-date">发布时间：{{time.gettime(item.addtime)}}
+          <text class="ikjka">阅读：{{item.nclick}}</text>
+            </view>
+        </view>
+    </view>
+  </view>
+
+  
+  <wxs module="time" src="/components/time.wxs"></wxs>

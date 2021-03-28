@@ -1,0 +1,9 @@
+<view class="container">
+    <view class="sports">
+        <view bindtap="jqDetails" class="sport-item" data-title="{{item.title}}" data-url="{{item.url}}" wx:for="{{jqList.jq}}" wx:key="index">
+            <image class="icon" src="{{'../../../../images/skill/'+item.image+'.png'}}"></image>
+            <text class="group_row_text">{{item.title}}</text>
+            <image class="arraw" mode="'aspectFit'" src="../../../../images/jkt/right.png"></image>
+        </view>
+    </view>
+</view>

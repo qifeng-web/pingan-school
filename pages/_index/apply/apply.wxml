@@ -1,0 +1,79 @@
+<view class="retDesc" wx:if="{{retDesc}}">
+    <view class="iowk">
+        <image src="/icons/suibn.png"></image>
+    </view>
+</view>
+<view wx:else>
+    <view class="top">
+        <view class="t-top">
+            <text class="t-top-text">{{info.title}}</text>
+            <text class="t-top-right">￥{{info.price}}</text>
+        </view>
+        <view class="t-butt">
+            <view class="t-bu-left">
+                <text class="fontss">最快{{info.aquire_number}}天拿证</text>
+                <text class="fontss">{{info.eachcar_num}}人一车</text>
+            </view>
+            <view class="tt-dsa">
+                <text>{{_count}}人报名</text>
+            </view>
+        </view>
+    </view>
+    <view class="text-eww">
+        <text class="dadww">个人信息</text>
+    </view>
+    <view class="inutds">
+        <view class="bord-saa">
+            <view class="dawee">
+                <text>您的姓名</text>
+            </view>
+            <view class="posla">
+                <input bindinput="name" class="cont" placeholder="请填写您姓名"></input>
+            </view>
+            <view class="id" wx:if="{{name!==''}}">
+                <icon type="success" size="46rpx"></icon>
+            </view>
+        </view>
+        <view class="bord-saa">
+            <view class="dawee">
+                <text>联系电话</text>
+            </view>
+            <view class="posla">
+                <input bindinput="write_phone" class="cont" maxlength="11" placeholder="请填写联系电话"></input>
+            </view>
+            <view class="id" wx:if="{{phone==''}}">
+                <icon type="warn" size="46rpx" color="#E64340"></icon>
+            </view>
+            <view class="id" wx:elif="{{phone=='1'}}"></view>
+            <view class="id" wx:else>
+                <icon type="success" size="46rpx"></icon>
+            </view>
+        </view>
+        <view class="bord-saa">
+            <view class="dawee">
+                <text>身份证号码</text>
+            </view>
+            <view class="posla">
+                <input value="{{idcard}}" bindinput="write_idcard" class="cont" maxlength="18" placeholder="请填写身份证号码" type="idcard"/>
+            </view>
+            <view class="id" wx:if="{{idcard==''&&idcard1!=='a'||idcard!==''&&idcard1==''}}">
+                <icon type="warn" size="46rpx" color="#E64340"></icon>
+            </view>
+            <view class="id" wx:elif="{{idcard1=='a'&&idcard==''}}"></view>
+            <view class="id" wx:else>
+                <icon type="success" size="46rpx"></icon>
+            </view>
+            <image class="id1" mode="aspectFit" src="/icons/tianjia.png" bindtap="shenfenzheng" />
+        </view>
+    </view>
+    <view class="text-eww">
+        <text class="dadww">班型介绍</text>
+    </view>
+    <view class="dabito">
+        <text>{{info.describe}}</text>
+    </view>
+    <view class="height"></view>
+        <view class="dwwpow">
+            <button type="primary" class="dwwpow" bindtap="tijiao" disabled='{{pan}}'>立即报名</button>
+        </view>
+</view>

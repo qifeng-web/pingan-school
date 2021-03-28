@@ -1,0 +1,6 @@
+<view class="wrap">
+    <view class="title">{{gonggao.title}}</view>
+    <view class="content">
+        <rich-text nodes="{{gonggao.content}}"></rich-text>
+    </view>
+</view>

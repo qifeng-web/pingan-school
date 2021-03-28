@@ -1,0 +1,13 @@
+<template name="subject_home">
+    <view class="section" wx:for="{{template_data}}" wx:for-index="oneindex" wx:for-item="oneitem" wx:key="key">
+        <view class="group_title_container">
+            <text class="group_title">{{oneitem.title}}</text>
+            <text class="group_summary">{{oneitem.summary}}</text>
+        </view>
+        <view bindtap="acrobaticsText" class="group_row_container" data-one="{{oneindex}}" data-title="{{twoitem.title}}" data-two="{{twoindex}}" wx:for="{{oneitem.articles}}" wx:for-index="twoindex" wx:for-item="twoitem" wx:key="key2">
+            <view class="all-color {{twoitem.url}}">{{twoindex+1}}</view>
+            <text class="group_row_text">{{twoitem.title}}</text>
+            <image class="arraw" src="../../../images/jkt/right.png"></image>
+        </view>
+    </view>
+</template>

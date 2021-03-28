@@ -1,0 +1,13 @@
+<view class="top">
+    <view class="t-top">
+        <text>{{xingui.title}}</text>
+    </view>
+    <view class="t-butt">
+        <text>发布时间：{{time.gettime(xingui.addtime)}}</text>
+        <text class="mar-left">{{xingui.nclick}}浏览</text>
+    </view>
+</view>
+<view class="boxda">
+    <rich-text nodes="{{xingui.content}}"></rich-text>
+</view>
+<wxs module="time" src="/components/time.wxs"></wxs>

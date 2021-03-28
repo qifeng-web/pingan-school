@@ -1,0 +1,11 @@
+<swiper bindchange="currentChange" current="{{current}}">
+    <swiper-item wx:for="{{srotdown}}" wx:key="key">
+        <view class="srotlist">
+            <view class="image-wrap">
+                <image mode="aspectFit" src="http://picture.eclicks.cn/kaojiazhao/public/traffic_marks/{{item.image}}"></image>
+            </view>
+            <view class="text"> {{item.title}} </view>
+            <view class="content"> {{item.desc}} </view>
+        </view>
+    </swiper-item>
+</swiper>

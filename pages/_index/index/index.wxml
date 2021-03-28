@@ -1,0 +1,154 @@
+<!-- 顶部区域 -->
+<view class="top">
+    <view class="top-t">
+        <!-- 城市定位 -->
+        <view class="dili" bindtap="_handcity">
+            <text>{{city!==''?city:'点击获取'}}</text>
+            <image class="dili-tu" src="../../../icons/weizhi.png"></image>
+        </view>
+        <!-- 查询 -->
+        <SearchInput></SearchInput>
+    </view>
+    <!-- 轮播图 -->
+    <view class="index_swiper">
+        <swiper autoplay indicator-dots circular>
+            <swiper-item wx:for="{{lunbotu}}" wx:key="_id">
+                <image bindtap="_touch" mode="widthFix" src="{{item.lunurl}}"></image>
+            </swiper-item>
+        </swiper>
+    </view>
+</view>
+<!-- 通知公告 -->
+<view class="inform clearfix">
+    <view class="inform-top clearfix">
+        <view class="tt-ldw clearfix">
+            <text>通知公告</text>
+        </view>
+        <navigator class="tt-righ clearfix" url="/pages/_index/gonggao/gonggao" open-type="navigate">
+            <swiper autoplay="true" circular="true" class="swiper_container" interval="7000" vertical="true">
+                <swiper-item wx:for="{{gongtitle}}" wx:key="_id">
+                    <view class="swiper_item"> {{item.title}}</view>
+                </swiper-item>
+            </swiper>
+        </navigator>
+    </view>
+    <!-- 导航 开始 -->
+    <view class="index_cate">
+        <navigator wx:for="{{daohang}}" wx:key="_id" url="{{item.url}}" open-type="navigate">
+            <image mode="widthFix" src="{{item.src}}"></image>
+            <view class="index_dao">{{item.name}}</view>
+        </navigator>
+    </view>
+    <!-- 导航 结束 -->
+</view>
+<!-- 空格 -->
+<view class="kong"></view>
+<!-- 分类 -->
+<Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange">
+    <!-- 班型 -->
+    <block wx:if="{{tabs[0].isActive}}">
+        <!-- <block wx:for="{{banxing}}" wx:key="_id" wx:if='{{index<4}}'>
+            <zu_banxing zu_banxing="{{item}}"></zu_banxing>
+        </block> -->
+        <view class="tab-one" wx:for="{{banxing}}" wx:key="_id" wx:if='{{index<4}}'>
+            <view class="tb-left">
+                <view class="tb-l-top flex-row">
+                    <text class="ovlkkd">{{item.title}}</text>
+                    <text class="colo-left">￥{{item.price}}</text>
+                </view>
+                <view class="tb-l-bott">
+                    <text>{{item.describe}}</text>
+                    <text class="lfeds"></text>
+                </view>
+            </view>
+            <view bindtap="hiti" class="tb-right" data-id="{{item._id}}" data-isflag="{{item.isflag}}">
+                <view class="tb-buttsa">
+                    <text>{{item.isflag==-1?'立即报名':item.isflag==0?'去付款':item.isflag==1?'已报名':item.isflag==2?'审核中':'已完成'}}</text>
+                </view>
+            </view>
+        </view>
+        <navigator class="buttda" url="/pages/_index/banxing/banxing?openid={{openid}}">
+            <text>查看全部班型 〉</text>
+        </navigator>
+    </block>
+    <!-- 教练 -->
+    <block wx:elif="{{tabs[1].isActive}}">
+        <view class="tab-one" wx:for="{{jiaolian}}" wx:key="_id" wx:if='{{index<4}}'>
+            <view class="tb-ll">
+                <view class="tous-img">
+                    <image class="toux-img" src="{{item.image}}"></image>
+                </view>
+            </view>
+            <view class="tb-auto">
+                <view class="t-a-top">
+                    <text>{{item.title}}</text>
+                </view>
+                <view class="t-a-a">
+                    <image class="xin-img"
+                        src="cloud://houtai-7gazdqja690aa725.686f-houtai-7gazdqja690aa725-1304802251/jiaolian/zheng.png"
+                        wx:for="{{item.starscore}}" wx:key="_id"></image>
+                    <text>{{item.starscore}}分</text>
+                </view>
+                <view class="t-a-butt">
+                    <text>学员{{item.count}}</text> |
+                    <text>教龄{{item.driving_age}}年</text>
+                </view>
+            </view>
+            <view bindtap="goto" class="tb-right">
+                <view class="tb-buttsa">
+                    <text>立即约课</text>
+                </view>
+            </view>
+        </view>
+        <navigator class="buttda" url="/pages/_index/jiaolian/jiaolian">
+            <text>查看全部教练 〉</text>
+        </navigator>
+    </block>
+    <!-- 场地 -->
+    <block wx:elif="{{tabs[2].isActive}}">
+        <view class="tab-one" wx:for="{{changdi}}" wx:key="_id" wx:if='{{index<4}}'>
+            <view class="tb-llw">
+                <view class="toaus-img">
+                    <image class="toux-img" src="{{item.imgpath}}"></image>
+                </view>
+            </view>
+            <view class="tb-autso">
+                <view class="t-a-atop">
+                    <text>{{item.name}}</text>
+                </view>
+                <view class="t-a-aa">
+                    <text>{{item.address}}</text>
+                </view>
+                <view class="t-a-buatt">
+                    <text>距离 {{item.juli}}</text>
+                </view>
+            </view>
+            <view bindtap="openLocation" class="tb-right" data-address="{{item.address}}" data-lat="{{item.lat}}"
+                data-lng="{{item.ing}}" data-name="{{item.name}}">
+                <view class="tb-buttsaa">
+                    <text>到这里</text>
+                </view>
+            </view>
+        </view>
+        <navigator class="buttda" url="/pages/_index/changdi/changdi">
+            <text>查看全部场地 〉</text>
+        </navigator>
+    </block>
+</Tabs>
+<button open-type="contact" class="contact">
+    <image src="/icons/kefu.png" class="kefu" mode="scaleToFill">
+    </image>
+</button>
+<view class="warrant" wx:if="{{!is_login}}">
+    <view class='white'>
+        <view class='tap'>您还未登录</view>
+        <view class='tip'>请先登录再进行操作</view>
+        <view class='pictrue'></view>
+        <view style='display:flex;'>
+            <button class='no' type="primary" bindtap='login' lang="zh_CN">暂不登录</button>
+            <button class='but' type="primary" open-type="getUserInfo" lang="zh_CN"
+                bindgetuserinfo="bindgetuserinfo">立即登录</button>
+        </view>
+    </view>
+    <view class='mask'></view>
+</view>

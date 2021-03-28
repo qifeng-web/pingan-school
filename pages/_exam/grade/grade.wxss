@@ -1,0 +1,264 @@
+ page {
+    width: 100%;
+    height: 100%;
+}
+
+.dati-top {
+    color: #fff;
+    padding-top: 45rpx;
+    padding-bottom: 30rpx;
+    text-align: center;
+    margin: auto;
+}
+
+.circle-box {
+    position: relative;
+    height: 270rpx;
+    width: 100%;
+    background: #1bd0ad;
+    display: flex;
+    justify-content: space-between;
+}
+
+.circle-left {
+    color: #fff;
+    margin-left: 50rpx;
+    z-index: 99;
+}
+
+.circle-left-title {
+    font-size: 30rpx;
+    padding-top: 71rpx;
+}
+
+.circle-left-content {
+    font-size: 40rpx;
+    font-weight: 500;
+    margin-top:30rpx;
+}
+
+.circle-left-content text {
+    font-size: 91rpx;
+    font-weight: 600;
+}
+
+.circle-right {
+    margin-right: 50rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index:99;
+}
+
+.circle-right-header {
+    width: 140rpx;
+    height: 140rpx;
+    background: #fff;
+    border-radius: 50%;
+    margin-top: 40rpx;
+    z-index: 99;
+}
+
+.circle-right-header view {
+    width: 120rpx;
+    height: 120rpx;
+    margin: 11rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    text-align: center;
+    line-height: 120rpx;
+    position: relative;
+    z-index: 99;
+}
+
+.circle-right-header image {
+    width: 130rpx;
+    height: 130rpx;
+    position: absolute;
+    left: -5rpx;
+    top: 0;
+}
+
+.circle-right-content {
+    color: #fff;
+    font-size: 30rpx;
+    text-align: center;
+    margin-top: 8rpx;
+    width: 200rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.down {
+    text-align: center;
+    font-size: 25rpx;
+    color: #000;
+    background: #fff;
+    padding-top: 55rpx;
+}
+
+.orange {
+    color: #fed531;
+}
+
+.subject text {
+    font-size: 36rpx;
+    font-weight: 500;
+}
+
+.all {
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 55rpx;
+    margin-right: 55rpx;
+}
+
+.all text {
+    font-size: 36rpx;
+}
+
+.view-title {
+    color: #666666;
+}
+
+.wraplist {
+    background: #fff;
+    height: auto;
+}
+
+.top {
+    position: relative;
+    height: 60rpx;
+    padding-top: 20px;
+}
+
+.top text {
+    position: absolute;
+    background: #e6e6e6;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    top: 50%;
+}
+
+.top view {
+    font-size: 33rpx;
+    width: 260rpx;
+    text-align: center;
+    height: 45rpx;
+    line-height: 45rpx;
+    border-radius: 45rpx;
+    margin: auto;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    padding-left: 10rpx;
+    padding-right: 10rpx;
+}
+
+.list {
+    margin-left: 42rpx;
+    margin-right: 22rpx;
+    display: flex;
+    justify-content: space-between;
+    font-size: 24rpx;
+    padding-bottom: 30rpx;
+    padding-top: 30rpx;
+}
+
+.list>text {
+    flex: 1;
+}
+
+.list text:nth-child(1) {
+    font-size: 30rpx;
+}
+
+.list text:nth-child(2) {
+    color: #414141;
+}
+
+.list text:nth-child(3) {
+    color: #a0a0a0;
+}
+
+.list text:nth-child(4) {
+    font-size: 30rpx;
+}
+
+.list text:nth-child(1) .span {
+    font-size: 22rpx;
+}
+
+.list .colorbule {
+    color: #1bd0ad;
+    font-weight: bold;
+}
+
+.list .colororange {
+    color: #fc3670;
+    font-weight: bold;
+}
+
+.default {
+    text-align: center;
+    font-size: 33rpx;
+    color: #a0a0a0;
+    padding-bottom: 20rpx;
+    margin-top: 20rpx;
+}
+
+button::after {
+    border: 0;
+}
+
+button {
+    background: none;
+}
+
+.myCanvas_banner {
+    width: 600px;
+    height: 480px;
+    position: fixed;
+    left: -1000px!important;
+    top: -1000px!important;
+    z-index: -10;
+}
+
+.myCanvas_grade_poster {
+    width: 750px;
+    height: 1150px;
+    left: -1000px!important;
+    top: -1000px!important;
+    z-index: -10;
+}
+.topBG {
+    background-color: #1bd0ad;
+    height: 250rpx;
+    position: relative;
+    width: 100%;
+}
+.topImage {
+    width: 100%;
+    height: 250rpx;
+    position: absolute;
+    z-index: 0;
+}
+.share{
+  height:44px;
+  width:40%;
+  line-height:44px;
+  position:fixed;
+  bottom:0;
+  left:30%;
+  background:#1bd0ad;
+  color:#fff;
+  margin-bottom:10px;
+  border-radius:40rpx;
+  font-size:32rpx;
+}

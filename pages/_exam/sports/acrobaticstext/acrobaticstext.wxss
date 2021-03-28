@@ -1,0 +1,48 @@
+.all-wrap {
+    background: #f9f9f9;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding-left: 35rpx;
+    padding-right: 35rpx;
+}
+
+.wrap {
+    padding-bottom: 20rpx;
+}
+
+.icon {
+    border: 1px solid #38a8ef;
+    color: #38a8ef;
+    font-size: 20rpx;
+    border-radius: 50%;
+    width: 36rpx;
+    height: 36rpx;
+    text-align: center;
+    line-height: 36rpx;
+}
+
+.text {
+    display: flex;
+    padding-top: 30rpx;
+}
+
+.title {
+    font-size: 32rpx;
+    font-weight: bold;
+    padding-top: 40rpx;
+    width: 100%;
+    white-space: pre-line;
+    line-height: 60rpx;
+}
+
+.content {
+    font-size: 30rpx;
+    color: #454545;
+    flex: 1;
+    line-height: 50rpx;
+    margin-left: 15rpx;
+}

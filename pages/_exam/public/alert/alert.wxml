@@ -1,0 +1,11 @@
+<view class="markgo" wx:if="{{alertShow}}">
+    <view class="markgo-wrap">
+        <view class="markgo-wrap-title">
+   {{alertTitle}}
+   </view>
+        <view class="markgo-wrap-content">
+   {{alertContent}}
+   </view>
+        <view bindtap="el_mark" class="marktrue">{{alertFooter}}</view>
+    </view>
+</view>

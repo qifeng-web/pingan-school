@@ -1,0 +1,19 @@
+<view class="box">
+    <view class="tab-one" wx:for="{{banxing}}" wx:key="_id">
+        <view class="tb-left">
+            <view class="tb-l-top flex-row">
+                <text class="ovlkkd">{{item.title}}</text>
+                <text class="colo-left">￥{{item.price}}</text>
+            </view>
+            <view class="tb-l-bott ">
+                <text>{{item.describe}}</text>
+                <text class="lfeds"></text>
+            </view>
+        </view>
+        <view bindtap="hiti" class="tb-right" data-id="{{item._id}}" data-isflag="{{item.isflag}}">
+            <view class="tb-buttsa">
+                <text>{{item.isflag==-1?'立即报名':item.isflag==0?'去付款':item.isflag==1?'已报名':item.isflag==2?'审核中':item.isflag==3?'已取消':item.isflag==4?'待退款':'已退款'}}</text>
+            </view>
+        </view>
+    </view>
+</view>

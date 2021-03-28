@@ -1,0 +1,89 @@
+<!-- <view class="forbox" wx:for="{{info}}" wx:key="userInfoListId">
+    <view class="f-b-top">
+        <view class="uijkw">
+            <view class="top-tt">
+                <text>{{item.classid1}}</text>
+            </view>
+            <view class="t-bb-font">
+                <text>一人一车 班车接送</text>
+            </view>
+        </view>
+        <view class="{{item.param_pay=='1'?'sub-btot':'sui-io'}}">
+            <text>{{item.param_pay=='1'?'报名':'预约'}}</text>
+        </view>
+    </view>
+    <view class="f-zopa">
+        <view>
+            <text>订单编号</text>
+            <text class="rigto">{{item.ordernum}}</text>
+        </view>
+        <view>
+            <text>下单时间</text>
+            <text class="rigto">{{item.addtime}}</text>
+        </view>
+        <view>
+            <text>订单金额</text>
+            <text class="rigto">￥ {{item.price}}</text>
+        </view>
+        <view>
+            <text>使用优惠券抵扣</text>
+            <text class="rigto">￥ {{item.coupons_price}}</text>
+        </view>
+        <view>
+            <text>实际支付金额</text>
+            <text class="rigto">￥ {{item.actual_payment}}</text>
+        </view>
+        <view>
+            <text>联系人</text>
+            <text class="rigto">{{item.linkman}}</text>
+        </view>
+        <view>
+            <text>手机号</text>
+            <text class="rigto">{{item.mobile}}</text>
+        </view>
+        <view>
+            <text>支付方式</text>
+            <text class="rigto">{{item.paytype}}</text>
+        </view>
+    </view>
+    <view class="f-boorr">
+        <view class="uijka">
+            <text>订单{{item.status1}}</text>
+        </view>
+        <view wx:if="{{item.status==0}}">
+            <view wx:if="{{item.price>0}}">
+                <view bindtap="pay" class="iolwkqw" data-id="{{item.id}}" data-param_pay="{{item.param_pay}}">
+                    <text>去付款</text>
+                </view>
+            </view>
+            <view bindtap="canel" class="dawik" data-id="{{item.id}}" data-param_pay="{{item.param_pay}}">
+                <text>取消</text>
+            </view>
+        </view>
+        <view wx:if="{{item.status==1}}">
+            <view bindtap="{{item.param_pay=='1'?'':'refund'}}" class="{{item.param_pay=='1'?'iokwela':'dawik'}}" data-id="{{item.id}}">
+                <text>{{item.param_pay=='1'?'待审核':'申请退款'}}</text>
+            </view>
+        </view>
+        <view wx:if="{{item.status==2}}">
+            <view class="iokwela">
+                <text>待审核</text>
+            </view>
+        </view>
+        <view wx:if="{{item.status==3}}">
+            <view class="iokwela">
+                <text>已取消</text>
+            </view>
+        </view>
+        <view wx:if="{{item.status==4}}">
+            <view class="iokwela">
+                <text>待退款</text>
+            </view>
+        </view>
+        <view wx:if="{{item.status==5}}">
+            <view class="iokwela">
+                <text>已退款</text>
+            </view>
+        </view>
+    </view>
+</view> -->

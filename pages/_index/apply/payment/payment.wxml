@@ -1,0 +1,53 @@
+<view class="top">
+    <view>
+        <text>订单编号</text>
+        <text class="margijlk">{{time.dingdan(info.time)}}</text>
+    </view>
+    <view>
+        <text>下单时间</text>
+        <text class="margijlk">{{time.gettime(info.time)}}</text>
+    </view>
+    <view>
+        <text>订单金额</text>
+        <text class="margijlk">￥{{banxing.price+'.00'}}</text>
+    </view>
+</view>
+<view class="toap">
+    <view>
+        <text>课程名称</text>
+        <text class="margijlk">{{banxing.title}}</text>
+    </view>
+    <view>
+        <text>课程简介</text>
+        <text class="margijlk">{{banxing.describe}}</text>
+    </view>
+</view>
+<view class="toap" wx:if="{{is}}">
+    <view class="colwe">
+        <text class="uiowwq">优惠券</text>
+        <text class="margijlk colwe">暂无可使用优惠券</text>
+    </view>
+</view>
+<view bindtap="goto" class="toap" data-url="/pages/_index/apply/price/price" wx:if="{{!is}}">
+    <view class="colwe">
+        <text class="uiowwq">优惠券</text>
+        <text class="margijlk colwe">{{uamount=='0'?'点击选择优惠券':-uamount}}</text>
+    </view>
+</view>
+<view class="toap">
+    <picker bindchange="bindPickerChange" range="{{array}}" value="{{index}}">
+        <view>
+            <text>支付方式</text>
+            <image class="you" src="/icons/jiantou.png"></image>
+            <text class="margijlk mari">{{array[arrzf]?array[arrzf]:'请选择支付方式'}}</text>
+        </view>
+    </picker>
+</view>
+<view class="toap">
+    <view>
+        <text>小计</text>
+        <text class="margijlk colwe iokla">￥{{now+'.00'}}</text>
+    </view>
+</view>
+        <button class="bottio" bindtap="zhifu">确定支付</button>
+<wxs module="time" src="/components/time.wxs"></wxs>

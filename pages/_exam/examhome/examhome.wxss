@@ -1,0 +1,56 @@
+.page {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+
+.wrap {
+    width: 80%;
+    height: 520rpx;
+    position: absolute;
+    top: -35%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.wrap>view {
+    padding-bottom: 10px;
+}
+
+.title {
+    font-size: 30rpx;
+    margin-left: 40rpx;
+}
+
+.car {
+    font-size: 30rpx;
+    margin-left: 15rpx;
+    color: #a3a3a3;
+}
+
+.blue {
+    color: #1bd0ad;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin-top: 60rpx;
+}
+
+.button view {
+    width: 45%;
+    background: #1bd0ad;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 32rpx;
+    padding-top: 15rpx;
+    padding-bottom: 15rpx;
+    color: #fff;
+}
+
+.button .green {
+    background: #52c023;
+}

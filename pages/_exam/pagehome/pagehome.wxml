@@ -1,0 +1,29 @@
+<view class="page">
+    <view class="container">
+        <view class="video-content">
+            <view class="plate-title">
+                <image class="img" src="http://picture.eclicks.cn/kaojiazhao/public/wx_xcx/video/videoicon.png"></image>
+                <text>学车视频</text>
+            </view>
+            <view class="video-list">
+                <view bindtap="videoDetail" class="video-item" data-id="{{item.id}}" wx:for="{{videoList}}" wx:key="index">
+                    <view class="video-poster">
+                        <image lazyLoad="true" src="{{item.small_pic}}"></image>
+                        <view class="shade">
+                            <text>{{item.total_time}}</text>
+                        </view>
+                    </view>
+                    <view class="video-info">
+                        <view class="title {{item.is_official==0?'':'official'}}">{{item.title}}</view>
+                        <view class="summary">{{item.sub_title}}</view>
+                        <view class="difficulty">
+                            <text>难度</text>
+                            <image src="../../../images/star-active.png" wx:for="{{item.stars*1}}" wx:key="indextype"></image>
+                            <image src="../../../images/nav_test_icon_fav.png" wx:for="{{5-item.stars*1}}" wx:key="indextype"></image>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

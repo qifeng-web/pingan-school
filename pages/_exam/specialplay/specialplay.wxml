@@ -1,0 +1,16 @@
+<view class="special">
+  <view bindtap="signGo" class="sign" data-ind="{{index}}" wx:for="{{sign}}" wx:for-item="signitem" wx:key="key">
+        <view class="sign-title">
+            <view class="left">
+                <text>{{signitem.title}}</text>
+            </view>
+            <view class="right">
+                <text>{{signitem.num}}张</text>
+                <image class="direction" src="/images/jkt/right.png"></image>
+            </view>
+        </view>
+        <view class="sign-wrap">
+            <image class="direction" src="{{srcitem}}" wx:for="{{signitem.src}}" wx:for-item="srcitem" wx:key="keysrc"></image>
+        </view>
+    </view>
+</view>

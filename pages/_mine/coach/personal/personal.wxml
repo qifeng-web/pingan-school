@@ -1,0 +1,72 @@
+<view class="top">
+  <view class="top-righh">
+    <view bindtap="driving_img" class="weja">
+      <text class="{{image==''?'diqu':''}}">头像</text>
+      <image class="dasoing" src="/icons/jiantou.png"></image>
+      <image class="okinmg" src="{{image?image:'/icons/dsadw.png'}}"></image>
+    </view>
+    <view class="weja">
+      <text>姓名</text>
+      <view class="okkla">
+        <text class="iuka">{{name}}</text>
+        <!-- <input bindinput="title" class="iuka" focus="{{focus}}" placeholder="未填写" value="{{title}}"></input> -->
+      </view>
+    </view>
+    <picker bindchange="bindPickerChange" range="{{array}}" value="{{index}}">
+      <view class="weja">
+        <text>性别</text>
+        <image class="dasoing" src="/icons/jiantou.png"></image>
+        <text class="daww">{{sex==1?'男':'女'}}</text>
+      </view>
+    </picker>
+  </view>
+</view>
+<view class="tops">
+  <view class="top-righh">
+    <view class="weja">
+      <text>手机</text>
+      <view class="okkla">
+        <text class="iuka">{{time.toHide(phone)}}</text>
+        <!-- <input bindinput="phone" class="iuka" focus="{{focus}}" maxlength="11" placeholder="未填写" type="number" value="{{phone}}"></input> -->
+      </view>
+    </view>
+    <view class="weja">
+      <text>身份证</text>
+      <view class="okkla">
+        <text class="iuka">{{time.idcard(idcard)}}</text>
+      </view>
+    </view>
+    <picker bindchange="bindRegionChange" mode="region">
+      <view class="weja">
+        <text class="{{area==''?'diqu':''}}">地区</text>
+        <image class="dasoing" src="/icons/jiantou.png"></image>
+        <text class="dawsw">{{area?area:'待完善'}}</text>
+      </view>
+    </picker>
+  </view>
+</view>
+<view class="tops1">
+  <view class="top-righh">
+    <view class="weja">
+      <text>工作驾校</text>
+      <view class="okkla">
+        <text class="iuka">平安驾校</text>
+      </view>
+    </view>
+    <view class="weja">
+      <text>教练车牌</text>
+      <view class="okkla">
+        <text class="iuka">{{chepai}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="daiojkiw">
+  <textarea  bindinput="discription" class="yikla" placeholder="介绍自己"
+    value="{{discription}}" maxlength="150"></textarea>
+    <text class="notice">还剩余{{leftLength}}字</text>
+</view>
+<view bindtap="submit" class="buttoms">
+  <text>保存</text>
+</view>
+<wxs module="time" src="/components/time.wxs"></wxs>

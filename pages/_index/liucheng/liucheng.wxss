@@ -1,0 +1,177 @@
+.top {
+  width: 100%;
+  height: 253rpx;
+  position: relative;
+}
+
+.popp-png {
+  width: 100%;
+  height: 100%;
+}
+
+.top-ti {
+  font-size: 42rpx;
+  position: absolute;
+  top: 0rpx;
+  left: 34rpx;
+  color: #fff;
+  line-height: 100rpx;
+  font-family: '微软雅黑';
+}
+
+.top-mae {
+  position: absolute;
+  top: 87rpx;
+  left: 34rpx;
+  font-size: 25rpx;
+  color: #fff;
+  line-height: 41rpx;
+}
+
+.xc-p3_img {
+  width: 26rpx;
+  height: 26rpx;
+  position: absolute;
+  top: 8rpx;
+}
+
+.margin {
+  margin-left: 42rpx;
+}
+
+.top-btt {
+  position: absolute;
+  top: 143rpx;
+  font-size: 23rpx;
+  color: #fff;
+  left: 34rpx;
+}
+
+.opl {
+  width: 100%;
+  height: 100rpx;
+  font-size: 25rpx;
+  line-height: 100rpx;
+  position: relative;
+  border-bottom: 1rpx solid #F4F5F7;
+}
+
+.xcdinw-png {
+  width: 25rpx;
+  height: 36rpx;
+  margin-left: 30rpx;
+  position: absolute;
+  top: 33rpx;
+}
+
+.iouw {
+  height: 100%;
+  position: absolute;
+  right: 20rpx;
+  top: 0rpx;
+  font-size: 25rpx;
+  color: #9E9E9E;
+}
+
+.aoiwk-img {
+  width: 28rpx;
+  height: 25rpx;
+  margin-left: 5rpx;
+}
+
+.dwwwq {
+  margin-left: 71rpx;
+}
+
+.poiaie {
+  width: 100%;
+  height: 344rpx;
+  background-color: #fff;
+  border-bottom: 1rpx solid #F4F5F7;
+}
+
+.poiaiea {
+  width: 100%;
+  height: 344rpx;
+  background-color: #fff;
+}
+
+.oikw {
+  width: 100%;
+  height: 85rpx;
+  line-height: 90rpx;
+  font-size: 29rpx;
+  position: relative;
+}
+
+.dwwawq {
+  margin-left: 20rpx;
+}
+
+.iouw {
+  height: 100%;
+  position: absolute;
+  right: 20rpx;
+  top: 0rpx;
+  font-size: 25rpx;
+  color: #9E9E9E;
+}
+
+.aoiwk-img {
+  width: 28rpx;
+  height: 25rpx;
+  margin-left: 5rpx;
+}
+
+.ikjlw {
+  width: 185rpx;
+  float: left;
+  margin-left: 3rpx;
+}
+
+.poklimh {
+  width: 100%;
+  height: 232rpx;
+  text-align: center;
+  font-size: 25rpx;
+  color: #818181;
+  position: relative;
+}
+
+.poklimha {
+  width: 100%;
+  height: 149rpx;
+  text-align: center;
+  font-size: 25rpx;
+  color: #818181;
+  position: relative;
+}
+
+.imhge {
+  width: 56rpx;
+  height: 59rpx;
+  margin-top: 39rpx;
+}
+
+.dwewetexct {
+  margin-top: 12rpx;
+}
+
+.XCimig {
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  top: 19rpx;
+}
+
+.bottm {
+  width: 100%;
+  height: 90rpx;
+  background-color: #1AB2F1;
+  position: fixed;
+  bottom: 0rpx;
+  text-align: center;
+  line-height: 90rpx;
+  font-size: 30rpx;
+  color: #fff;
+}

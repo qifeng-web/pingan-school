@@ -1,0 +1,33 @@
+<view catchtouchmove class="status-wrap" wx:if="{{showStatus}}">
+    <view class="status-center">
+        <view class="title" style="color:#ff6430;">
+            <text>成绩不合格</text>
+        </view>
+        <view class="canvas-wrap">
+            <canvas canvasId="status" style="width:100%;"></canvas>
+            <canvas canvasId="status-gap" class="status-gap" style="width:100%;"></canvas>
+            <view class="center" wx:if="{{statusOptions.statusType==0}}">
+                <view>你已答错</view>
+                <view>11题</view>
+            </view>
+            <view class="center" wx:if="{{statusOptions.statusType==1}}">
+                <view>剩余未做</view>
+                <view>{{statusOptions.statusAnswer}}题</view>
+            </view>
+        </view>
+        <view class="content">
+            <text wx:if="{{statusOptions.statusAnswer&&statusOptions.statusType==0}}">未答{{statusOptions.statusAnswer}}题</text>
+            <text></text>
+            <text>当前考试得分{{statusOptions.statusScore}}分</text>
+        </view>
+        <view class="button" wx:if="{{statusOptions.statusType==0}}">
+            <view bindtap="choose_btn" class="btn_border" data-msg="goon">继续答题</view>
+            <!-- <view bindtap="choose_btn" data-msg="again">重考</view> -->
+            <view bindtap="choose_btn" data-msg="up">现在交卷</view>
+        </view>
+        <view class="button" wx:if="{{statusOptions.statusType==1}}">
+            <view bindtap="choose_btn" class="btn_border" data-msg="goon">继续答题</view>
+            <view bindtap="choose_btn" data-msg="up">现在交卷</view>
+        </view>
+    </view>
+</view>

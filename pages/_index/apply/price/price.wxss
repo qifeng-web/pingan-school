@@ -1,0 +1,135 @@
+page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.navbar {
+  flex: none;
+  display: flex;
+  background: #fff;
+  font-size: 30rpx;
+  color: #686868;
+}
+
+.navbar .item {
+  position: relative;
+  flex: auto;
+  text-align: center;
+  line-height: 100rpx;
+}
+
+.navbar .item.active {
+  color: #3380F7;
+}
+
+.navbar .item.active:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4rpx;
+  background: #3380F7;
+}
+
+.tb1-box {
+  width: 710rpx;
+  height: 165rpx;
+  margin: 0 auto;
+  margin-top: 38rpx;
+  position: relative;
+}
+
+.uijkks {
+  width: 100%;
+  height: 100%;
+}
+
+.uiiks {
+  height: 100%;
+  position: absolute;
+  top: 0rpx;
+  left: 0rpx;
+  font-size: 30rpx;
+}
+
+.poloiw {
+  margin-left: 42rpx;
+  margin-top: 36rpx;
+}
+
+.uijka {
+  margin-left: 42rpx;
+  margin-top: 10rpx;
+  font-size: 23rpx;
+  color: #767573;
+}
+
+.uijjkw {
+  font-size: 40rpx;
+  color: #FD6507;
+  font-weight: bold;
+}
+
+.iow {
+  font-size: 40rpx;
+  color: #666666;
+  font-weight: bold;
+}
+
+.IOKLA {
+  color: #FD6507;
+  margin-left: 20rpx;
+  font-size: 24rpx;
+}
+
+.IOKsaLA {
+  color: #666666;
+  margin-left: 20rpx;
+  font-size: 24rpx;
+}
+
+.uikjrr {
+  width: 155rpx;
+  height: 57rpx;
+  background-color: #FE760A;
+  color: #fff;
+  position: absolute;
+  top: 36rpx;
+  right: 24rpx;
+  text-align: center;
+  line-height: 55rpx;
+  font-size: 25rpx;
+  border-radius: 50rpx;
+  margin-top: 20rpx;
+}
+
+.sss {
+  width: 155rpx;
+  height: 57rpx;
+  color: #FE760A;
+  position: absolute;
+  top: 36rpx;
+  right: 24rpx;
+  text-align: center;
+  line-height: 55rpx;
+  font-size: 25rpx;
+  border-radius: 50rpx;
+  margin-top: 20rpx;
+  border: 1px solid #FE760A;
+}
+
+.uikwk {
+  width: 161rpx;
+  height: 85rpx;
+  position: absolute;
+  top: 39rpx;
+  right: 24rpx;
+}
+
+.ijklawqqq {
+  width: 100%;
+  height: 100%;
+}

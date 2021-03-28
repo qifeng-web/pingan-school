@@ -1,0 +1,100 @@
+<view class="page" data-weui-theme="{{theme}}">
+  <view class="page__bd">
+    <view class="weui-cells__title">请选择您要注册的身份</view>
+    <checkbox-group bindchange="checkboxChange" class="_jl">
+      <label class="checkbox" wx:for="{{items}}" wx:key="index">
+        <checkbox value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+      </label>
+    </checkbox-group>
+    <view class="weui-cells__title">请填写以下内容</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_active">
+        <view class="weui-cell__hd">
+          <view class="weui-label">姓名</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input bindinput="name" class="weui-input" placeholder-class="weui-input__placeholder" placeholder="请输入您的姓名"
+            confirm-type="next" />
+        </view>
+      </view>
+      <!-- <view class="weui-cell weui-cell_vcode"> -->
+      <view class="weui-cell weui-cell_active">
+        <view class="weui-cell__hd">
+          <view class="weui-label">手机号</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input bindinput="write_phone" class="weui-input" placeholder-class="weui-input__placeholder"
+            placeholder="请输入您的手机号" confirm-type="next" maxlength="11" />
+        </view>
+        <!-- <view class="weui-cell__ft">
+          <view class="weui-vcode-btn">获取验证码</view>
+        </view> -->
+        <view class="id" wx:if="{{phone==''}}">
+          <icon type="warn" size="46rpx" color="#E64340"></icon>
+        </view>
+        <view class="id" wx:elif="{{phone=='1'}}"></view>
+        <view class="id" wx:else>
+          <icon type="success" size="46rpx"></icon>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_active">
+        <view class="weui-cell__hd">
+          <view class="weui-label">身份证</view>
+        </view>
+
+        <view class="weui-cell__bd">
+          <input bindinput="write_idcard" class="weui-input" maxlength="18" placeholder-class="weui-input__placeholder"
+            type="idcard" placeholder="请输入您的身份证号码" confirm-type="next" />
+        </view>
+        <view class="id" wx:if="{{idcard==''&&idcard1!=='a'||idcard!==''&&idcard1==''}}">
+          <icon type="warn" size="46rpx" color="#E64340"></icon>
+        </view>
+        <view class="id" wx:elif="{{idcard1=='a'&&idcard==''}}"></view>
+        <view class="id" wx:else>
+          <icon type="success" size="46rpx"></icon>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_active weui-cell_vcode">
+        <view class="weui-cell__hd">
+          <view class="weui-label">验证码</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input bindinput="write_yanzheng" class="weui-input" placeholder-class="weui-input__placeholder"
+            placeholder="请输入验证码" maxlength="4" />
+        </view>
+        <view class="id" wx:if="{{!yan}}">
+          <icon type="warn" size="46rpx" color="#E64340"></icon>
+        </view>
+        <view class="id" wx:else>
+          <icon type="success" size="46rpx"></icon>
+        </view>
+        <view class="weui-cell__ft yanzhengma">
+          <text class='left' bindtap='createCode'>{{code}}</text>
+          <!-- <image class="weui-vcode-img" src="/images/vcode.jpg"></image> -->
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells__tips">请上传资格证或其他可辅助注册照片,最多九张</view>
+
+    <view class="imageList">
+      <block wx:for="{{chooseImages}}" wx:key="index">
+        <view class="imageWrap">
+          <image src="{{item}}" data-src="{{item}}" mode="aspectFill" bindtap="_handlerPreviewImage" />
+          <i data-index="{{index}}" class="iconfont icon-close close" bindtap="_handlerDeleteImage" />
+        </view>
+      </block>
+      <view class="imageWrap" bindtap="_handlerChooseImage" hidden="{{chooseImages.length === 9}}">
+        <i class="iconfont icon-add" />
+      </view>
+    </view>
+
+    <label class="weui-agree" bindtap="tiao">
+      <checkbox class="weui-agree__checkbox-check" checked="{{bian}}" />
+      <span class="weui-agree__checkbox"></span>
+      <span class="weui-agree__text">阅读并同意<navigator url="" class="weui-agree__link">《相关条款》</navigator></span>
+    </label>
+    <view class="dwwpow">
+      <button type="primary" class="dwwpow" bindtap="tijiao" disabled='{{pan}}'>立即报名</button>
+    </view>
+  </view>
+</view>

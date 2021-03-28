@@ -1,0 +1,38 @@
+<view class="container">
+    <video bindtimeupdate="videotimeupdate" customCache="{{false}}" id="video" objectFit="cover" poster="{{video.video_pic}}" src="{{video.video_url}}"></video>
+    <view class="correlation-content">
+        <view>
+            <view class="video-title {{video.is_official==0?'':'official'}}">{{video.title}}</view>
+        </view>
+        <scroll-view scrollX class="clip-list" wx:if="{{stepList.length>0}}">
+            <view bindtap="seekStep" class="clip-item {{currentTime>=item.start_time-1&&currentTime<item.end_time?'playing':''}}" data-endtime="{{item.end_time}}" data-starttime="{{item.start_time}}" wx:for="{{stepList}}" wx:key="{{index}}">
+                <image class="image" src="{{item.img_url}}"></image>
+                <view class="clip-title">{{index+1}}. {{item.title}}</view>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="mj" wx:if="{{videoTopics}}">
+        <view class="mj-title">秘籍</view>
+        <view class="mj-list">
+            <view bindtap="mjDetails" class="mj-item" data-title="{{item.title}}" data-url="{{item.info_url}}" wx:for="{{videoTopics}}" wx:key="{{item.info_tid}}">
+                <view class="mj-item-content">
+                    <text>{{item.title}}</text>
+                </view>
+                <view class="author">
+                    <image class="avatar" src="cloud://houtai-7gazdqja690aa725.686f-houtai-7gazdqja690aa725-1304802251/about/jiaxiao.jpg"></image>
+                    <text class="author-name">平安驾考</text>
+                </view>
+                <view class="data">
+                    <image class="glance-over-img" mode="aspectFit" src="../../../images/subject/glance_over.png"></image>
+                    <text class="glance-over-count">{{tag.tag_count(item.view_count)}}万</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<wxs module="tag">
+module.exports.tag_count = (function(count) {
+    var num_int = count / 10000;
+    return (num_int.toFixed(1))
+});
+</wxs>

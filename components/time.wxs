@@ -1,0 +1,54 @@
+function gettime(date) {
+  var dateV = getDate(date)
+  var year = dateV.getFullYear()
+  var month = dateV.getMonth() + 1
+  month = month < 10 ? "0" + month : month
+  var day = dateV.getDate()
+  day = day < 10 ? "0" + day : day
+  var hour = dateV.getHours()
+  hour = hour < 10 ? "0" + hour : hour
+  var mini = dateV.getMinutes()
+  mini = mini < 10 ? "0" + mini : mini
+  var second = dateV.getSeconds()
+  second = second < 10 ? "0" + second : second
+  return [year, month, day].join("-") + " " + [hour, mini, second].join(":")
+}
+function dingdan(date) {
+  var dateV = getDate(date)
+  var year = dateV.getFullYear()
+  var month = dateV.getMonth() + 1
+  month = month < 10 ? "0" + month : month
+  var day = dateV.getDate()
+  day = day < 10 ? "0" + day : day
+  var hour = dateV.getHours()
+  hour = hour < 10 ? "0" + hour : hour
+  var mini = dateV.getMinutes()
+  mini = mini < 10 ? "0" + mini : mini
+  var second = dateV.getSeconds()
+  second = second < 10 ? "0" + second : second
+  return [year, month, day].join("") + [hour, mini, second].join("")
+}
+function youhui(date) {
+  var dateV = getDate(date)
+  var year = dateV.getFullYear()
+  var month = dateV.getMonth() + 1
+  month = month < 10 ? "0" + month : month
+  var day = dateV.getDate()
+  day = day < 10 ? "0" + day : day
+  return [year, month, day].join("-")
+}
+var toHide = function(array) {
+  var phone = array.substring(0, 3) + '****' + array.substring(7);
+  return phone;
+}
+var idcard = function(array) {
+  var phone = array.substring(0, 9) + '*******' + array.substring(16);
+  return phone;
+}
+module.exports = {
+  gettime: gettime,
+  dingdan:dingdan,
+  youhui:youhui,
+  toHide:toHide,
+  idcard:idcard
+}

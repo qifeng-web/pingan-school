@@ -1,0 +1,155 @@
+@import "/icon-font.wxss";
+page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #F4F5F7;
+}
+.imageList {
+  /* height: 450rpx; */
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #F4F5F7;
+}
+.imageWrap image {
+  width: 100%;
+  height: 100%;
+}
+
+.box {
+  margin-top: 20rpx;
+}
+
+.tb-ll {
+  width: 118rpx;
+  height: 100%;
+}
+
+.tous-img {
+  width: 100rpx;
+  height: 100rpx;
+  background-color: palegoldenrod;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: 10rpx;
+}
+
+.toux-img {
+  width: 100%;
+  height: 100%;
+}
+
+
+.t-a-top {
+  width: 100%;
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-top: 20rpx;
+}
+
+
+
+.xin-img {
+  width: 25rpx;
+  height: 25rpx;
+  margin-right: 10rpx;
+}
+
+.t-a-butt {
+  width: 100%;
+  font-size: 24rpx;
+  color: #6A6A6A;
+}
+
+.imageWrap {
+  margin: 10rpx;
+  width: 230rpx;
+  height: 230rpx;
+  border: 1px  turquoise;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 230rpx;
+  position: relative;
+}
+
+
+.forbox {
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+
+.f-b-top {
+  height: 120rpx;
+  font-size: 30rpx;
+  position: relative;
+  border-bottom: 1rpx solid #F4F5F7;
+}
+
+.uijkw {
+  height: 100%;
+  position: absolute;
+  top: 0rpx;
+  left: 25rpx;
+  display: flex;
+  justify-content:space-between;
+}
+
+.t-bb-font {
+  font-size: 25rpx;
+  color: #AFAFAF;
+}
+
+.tong{
+  margin-left: 20rpx;
+}
+.sui-io {
+  width: 127rpx;
+  height: 50rpx;
+  position: absolute;
+  right: 25rpx;
+  top: 37rpx;
+  text-align: center;
+  font-size: 25rpx;
+  line-height: 50rpx;
+  color: #77A3DE;
+  background-color: #DDEAFD;
+}
+
+.f-zopa {
+  font-size: 25rpx;
+  color: #AFAFAF;
+  padding: 20rpx;
+  line-height: 43rpx;
+  border-bottom: 1rpx solid #F4F5F7;
+}
+
+.rigto {
+  float: right;
+}
+
+.f-boorr {
+  padding: 20rpx;
+  font-size: 30rpx;
+  position: relative;
+  border-bottom: 1rpx solid #F4F5F7;
+}
+
+.uijka {
+  font-size: 27rpx;
+  color: #FF5C63;
+  line-height: 61rpx;
+}
+.iokwela {
+  position: absolute;
+  right: 20rpx;
+  top: 24rpx;
+  background-color: #1bd0ad;
+  padding-left: 35rpx;
+  padding-right: 35rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  border-radius: 50rpx;
+  font-size: 25rpx;
+  color: white;
+}

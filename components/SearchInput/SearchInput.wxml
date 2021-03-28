@@ -1,0 +1,8 @@
+<view class="search_input">
+  <navigator url="/pages/_index/search/search" open-type="navigate">
+    搜索班型, 教练
+    <view class="serch">
+      <icon color="#fff" size="20" type="search"></icon>
+    </view>
+  </navigator>
+</view>

@@ -1,0 +1,2 @@
+<import src="../public/sportslist/sportslist.wxml"></import>
+<template is="subject_home" data="{{template_data:template_data}}"></template>

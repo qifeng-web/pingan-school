@@ -1,0 +1,100 @@
+<Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange">
+  <view class="index_swiper">
+        <swiper autoplay indicator-dots circular>
+            <swiper-item wx:for="{{lunbotu}}" wx:key="_id">
+                <image mode="widthFix" src="{{item.lunurl}}"></image>
+            </swiper-item>
+        </swiper>
+    </view>
+  <block wx:if="{{tabs[0].isActive}}">
+    <view class="tb1-box">
+    <view id="{{item._id}}" bindtap="goto" class="tb1-b-onr"  wx:for="{{xingui1}}" wx:key="index">
+        <view class="tb1-b-img">
+            <image class="car-img" src="{{item.imgpath}}"></image>
+        </view>
+        <view class="tb1-bright">
+            <view class="tb1-b-top">
+                <text>{{item.title}}</text>
+            </view>
+            <view class="tb1-r-but">
+                <text>{{time.gettime(item.addtime)}}</text>
+                <text class="lefdta">{{item.nclick}}浏览</text>
+            </view>
+        </view>
+    </view>
+</view>
+  </block>
+  <block wx:if="{{tabs[1].isActive}}">
+    <view class="tb1-box">
+    <view id="{{item._id}}" bindtap="goto" class="tb1-b-onr"  wx:for="{{xingui}}" wx:key="index">
+        <view class="tb1-b-img">
+            <image class="car-img" src="{{item.imgpath}}"></image>
+        </view>
+        <view class="tb1-bright">
+            <view class="tb1-b-top">
+                <text>{{item.title}}</text>
+            </view>
+            <view class="tb1-r-but">
+                <text>{{time.gettime(item.addtime)}}</text>
+                <text class="lefdta">{{item.nclick}}浏览</text>
+            </view>
+        </view>
+    </view>
+</view>
+  </block>
+  <block wx:if="{{tabs[2].isActive}}">
+    <view class="tb1-box">
+    <view id="{{item._id}}" bindtap="goto" class="tb1-b-onr"  wx:for="{{xingui}}" wx:key="index">
+        <view class="tb1-b-img">
+            <image class="car-img" src="{{item.imgpath}}"></image>
+        </view>
+        <view class="tb1-bright">
+            <view class="tb1-b-top">
+                <text>{{item.title}}</text>
+            </view>
+            <view class="tb1-r-but">
+                <text>{{time.gettime(item.addtime)}}</text>
+                <text class="lefdta">{{item.nclick}}浏览</text>
+            </view>
+        </view>
+    </view>
+</view>
+  </block>
+  <block wx:if="{{tabs[3].isActive}}">
+    <view class="tb1-box">
+    <view id="{{item._id}}" bindtap="goto" class="tb1-b-onr"  wx:for="{{xingui}}" wx:key="index">
+        <view class="tb1-b-img">
+            <image class="car-img" src="{{item.imgpath}}"></image>
+        </view>
+        <view class="tb1-bright">
+            <view class="tb1-b-top">
+                <text>{{item.title}}</text>
+            </view>
+            <view class="tb1-r-but">
+                <text>{{time.gettime(item.addtime)}}</text>
+                <text class="lefdta">{{item.nclick}}浏览</text>
+            </view>
+        </view>
+    </view>
+</view>
+  </block>
+  <block wx:if="{{tabs[4].isActive}}">
+    <view class="tb1-box">
+    <view id="{{item._id}}" bindtap="goto" class="tb1-b-onr"  wx:for="{{xingui}}" wx:key="index">
+        <view class="tb1-b-img">
+            <image class="car-img" src="{{item.imgpath}}"></image>
+        </view>
+        <view class="tb1-bright">
+            <view class="tb1-b-top">
+                <text>{{item.title}}</text>
+            </view>
+            <view class="tb1-r-but">
+                <view>{{time.gettime(item.addtime)}}</view>
+                <text class="lefdta">{{item.nclick}}浏览</text>
+            </view>
+        </view>
+    </view>
+</view>
+  </block>
+</Tabs>
+<wxs module="time" src="/components/time.wxs"></wxs>

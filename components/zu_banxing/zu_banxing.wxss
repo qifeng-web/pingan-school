@@ -1,0 +1,82 @@
+page {
+  background-color: #F4F5F7;
+}
+
+.tab-one {
+  width: 100%;
+  height: 145rpx;
+  border-bottom: 1px solid #F1F1F1;
+  position: relative;
+  background-color: #fff;
+}
+
+.tb-left {
+  width: 507rpx;
+  height: 100%;
+  font-size: 26rpx;
+  position: relative;
+}
+
+.tb-l-top {
+  height: 50rpx;
+  position: absolute;
+  top: 32rpx;
+  margin-left: 25rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.colo-left {
+  margin-left: 20rpx;
+  color: red;
+}
+
+.tb-l-bott {
+  width: 490rpx;
+  height: 50rpx;
+  position: absolute;
+  top: 80rpx;
+  font-size: 23rpx;
+  margin-left: 25rpx;
+  color: #9d9d9d;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tb-right {
+  width: 225rpx;
+  height: 100%;
+  position: absolute;
+  top: 0rpx;
+  right: 0rpx;
+  text-align: center;
+  line-height: 150rpx;
+}
+
+.tb-buttsa {
+  width: 163rpx;
+  height: 50rpx;
+  background-color: #17B7F1;
+  border-radius: 50rpx;
+  color: #fff;
+  font-size: 25rpx;
+  line-height: 50rpx;
+  margin-left: 29rpx;
+  margin-top: 50rpx;
+}
+
+.lfeds {
+  margin-left: 20rpx;
+}
+
+.cuo {
+  font-weight: bold;
+}
+.ovlkkd {
+  width: 335rpx;
+  height: 50rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

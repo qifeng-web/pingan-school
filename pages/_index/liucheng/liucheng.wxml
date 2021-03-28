@@ -1,0 +1,132 @@
+<view class="wrap content">
+    <rich-text nodes="{{text}}"></rich-text>
+</view>
+<!-- 111 -->
+<!-- <view class="top">
+    <image class="popp-png" src="/icons/popp.png"></image>
+    <view class="top-ti">
+        <text>学车第一步 选对考题库</text>
+    </view>
+    <view class="top-mae">
+        <image class="xc-p3_img" src="/icons/xc-p3.png"></image>
+        <text class="margin">已更新至：2019/04/03</text>
+    </view>
+    <view class="top-btt">
+        <text>科目一共1334题,  科目二共1240题</text>
+    </view>
+</view>
+<view bindtap="" class="opl">
+    <image class="xcdinw-png" src="/icons/xcdinw.png"></image>
+    <text class="dwwwq">盐城市</text>
+    <view class="iouw">
+        <text>定位成功</text>
+        <image class="aoiwk-img" src="/icons/jiantou.png"></image>
+    </view>
+</view>
+<view class="poiaie">
+    <view class="oikw">
+        <text class="dwwawq">驾驶证</text>
+    </view>
+    <view bindtap="" class="ikjlw">
+        <view class="poklimh">
+            <image class="imhge" src="/icons/xctop1.png"></image>
+            <image class="XCimig" src="/icons/XC-PO.jpg"></image>
+            <view class="dwewetexct">
+                <text>小车</text>
+            </view>
+            <view class="dwewetexct">
+                <text>C1/C2/C3</text>
+            </view>
+        </view>
+    </view>
+    <view bindtap="" class="ikjlw">
+        <view class="poklimh">
+            <image class="imhge" src="/icons/xctop2.png"></image>
+            <view class="dwewetexct">
+                <text>货车</text>
+            </view>
+            <view class="dwewetexct">
+                <text>A2/B2</text>
+            </view>
+        </view>
+    </view>
+    <view bindtap="" class="ikjlw">
+        <view class="poklimh">
+            <image class="imhge" src="/icons/xctop3.png"></image>
+            <view class="dwewetexct">
+                <text>客车</text>
+            </view>
+            <view class="dwewetexct">
+                <text>A1/A3/B1</text>
+            </view>
+        </view>
+    </view>
+    <view class="ikjlw">
+        <view class="poklimh">
+            <image class="imhge" src="/icons/xctop4.png"></image>
+            <view class="dwewetexct">
+                <text>摩托车</text>
+            </view>
+            <view class="dwewetexct">
+                <text>D/E/F</text>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="poiaiea">
+    <view class="oikw">
+        <text class="dwwawq">资格证</text>
+    </view>
+    <view bindtap="" class="ikjlw">
+        <view class="poklimha">
+            <image class="imhge" src="/icons/xc1.png"></image>
+            <image class="XCimig" src="/icons/XC-PO.jpg"></image>
+            <view class="dwewetexct">
+                <text>客运</text>
+            </view>
+        </view>
+    </view>
+    <view bindtap="" class="ikjlw">
+        <view class="poklimha">
+            <image class="imhge" src="/icons/xc2.png"></image>
+            <view class="dwewetexct">
+                <text>货车</text>
+            </view>
+        </view>
+    </view>
+    <view bindtap="" class="ikjlw">
+        <view class="poklimha">
+            <image class="imhge" src="/icons/xc3.png"></image>
+            <view class="dwewetexct">
+                <text>危险品</text>
+            </view>
+        </view>
+    </view>
+    <view class="ikjlw">
+        <view class="poklimha">
+            <image class="imhge" src="/icons/xc4.png"></image>
+            <view class="dwewetexct">
+                <text>教练员</text>
+            </view>
+        </view>
+    </view>
+    <view class="ikjlw">
+        <view class="poklimha">
+            <image class="imhge" src="/icons/xc5.png"></image>
+            <view class="dwewetexct">
+                <text>出租车</text>
+            </view>
+        </view>
+    </view>
+    <view class="ikjlw">
+        <view class="poklimha">
+            <image class="imhge" src="/icons/xc6.png"></image>
+            <view class="dwewetexct">
+                <text>网约车</text>
+            </view>
+        </view>
+    </view>
+</view>
+<view bindtap="goto" class="bottm" data-url="/pages/_index/index/xdriving/driver/driver">
+    <text>下一步</text>
+</view> -->

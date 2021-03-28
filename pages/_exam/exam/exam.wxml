@@ -1,0 +1,54 @@
+<view bindtap="examStop" class="tab-wrap" wx:if="{{timeshow}}">
+  <view class="tab">
+    <image src="/images/nav_icon_time@2x.png"></image>
+    <text> 倒计时: {{times}}</text>
+  </view>
+</view>
+<view style="height:85rpx;background:#f5f6f7" wx:if="{{timeshow}}"></view>
+<import src="../public/moniq/moniq.wxml"></import>
+<view class="page">
+<video autoplay controls="{{false}}" id="myVideo" loop="{{true}}" objectFit="cover" src="{{videoMedia}}" style="width:90%;height:30%;margin-left:5%" wx:if="{{videoMedia&&videoctrl}}"></video>
+  <swiper autoplay="{{autoplay}}" bindchange="pageChange" circular="{{xiejie}}" class="{{videoMedia&&videoctrl?'flexauto':'noflex'}}" current="{{current}}" duration="500" indicatorDots="{{false}}" interval="{{interval}}" wx:if="{{!iconIndtwo}}">
+    <swiper-item wx:for="{{questions}}" wx:for-item="downContent" wx:key="key">
+      <template is="answer" data="{{downContent:downContent,textTab:textTab,videoctrl:videoctrl,testMode:testMode}}"></template>
+    </swiper-item>
+  </swiper>
+</view>
+<view bindtap="_updown" class="footer-mark" wx:if="{{iconInd}}"></view>
+<view class="footer">
+  <view class="header">
+    <view bindtap="_updown" class="h-left">
+      <view>
+        <image src="/images/q_answer_sheet_right.png"></image>
+        <text style="color:#33c500">{{greenNum}}</text>
+      </view>
+      <view>
+        <image src="/images/q_answer_sheet_wrong.png"></image>
+        <text style="color:#ff3030">{{redNum}}</text>
+      </view>
+      <view>
+        <image src="/images/q_answer_sheet_number.png"></image>
+        <text>{{indexInd*1+1}}/{{idarr.length}}</text>
+      </view>
+    </view>
+    <view bindtap="newUp_exam" class="h-right" wx:if="{{timeshow}}">
+      <image src="/images/jexam.png"></image>
+      <text style="color: #1bd0ad;">交卷</text>
+    </view>
+  </view>
+  <view class="{{iconInd?'wrap-icon-active':'wrap-icon'}}">
+    <scroll-view scrollY style="height: 100%">
+      <view class="icon-circle" wx:if="{{iconIndtwo}}">
+        <view class="circle-wrap">
+          <view bindtap="jumpToQuestion" data-color="{{orderPX[itemName2]}}" data-id="{{itemName2}}" data-index="{{idx2}}" wx:if="{{orderPX[itemName2]!=true}}" wx:for="{{idarr}}" wx:for-index="idx2" wx:for-item="itemName2" wx:key="key2">
+            <view class="now" wx:if="{{orderPX[itemName2]!='red'&&orderPX[itemName2]!='green'&&orderPX[itemName2]!='blue'}}">{{idx2+1}}</view>
+            <view class="red" wx:if="{{orderPX[itemName2]=='red'}}">{{idx2+1}}</view>
+            <view class="green" wx:if="{{orderPX[itemName2]=='green'}}">{{idx2+1}}</view>
+            <view class="blue" wx:if="{{orderPX[itemName2]=='blue'}}">{{idx2+1}}</view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+<component-status bindmyevent="status_choose_btn" showStatus="{{showStatus}}" statusOptions="{{statusOptions}}" wx:if="{{showStatus}}"></component-status>

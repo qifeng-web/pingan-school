@@ -1,0 +1,90 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "新",
+          "pathName": "pages/_mine/mine",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "订单",
+          "pathName": "pages/_mine/order/order",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/_exam/index/index",
+          "pathName": "pages/_exam/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/_exam/moni/index",
+          "pathName": "pages/_exam/moni/index",
+          "query": "mode=1",
+          "scene": null
+        },
+        {
+          "name": "pages/_mine/stocks/stocks",
+          "pathName": "pages/_mine/stocks/stocks",
+          "query": "openid=o2Y0N45vucKmCczeON6-UKoZuRNE",
+          "scene": null
+        },
+        {
+          "name": "pages/_index/index/index",
+          "pathName": "pages/_index/index/index",
+          "query": "openid=o2Y0N45vucKmCczeON6-UKoZuRNE",
+          "scene": null
+        },
+        {
+          "name": "pages/_index/apply/payment/payment",
+          "pathName": "pages/_index/apply/payment/payment",
+          "query": "id=79550af2600bde13009294095c552183&openid=o2Y0N45vucKmCczeON6-UKoZuRNE",
+          "scene": null
+        },
+        {
+          "name": "pages/_index/apply/price/price",
+          "pathName": "pages/_index/apply/price/price",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/_mine/zhuce/zhuce",
+          "pathName": "pages/_mine/zhuce/zhuce",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/_mine/guanli/guanli",
+          "pathName": "pages/_mine/guanli/guanli",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/_mine/coach/coach",
+          "pathName": "pages/_mine/coach/coach",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/_mine/guanli/shenhe/shenhe",
+          "pathName": "pages/_mine/guanli/shenhe/shenhe",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

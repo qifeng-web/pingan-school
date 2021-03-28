@@ -1,0 +1,304 @@
+<Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange">
+    <block wx:if="{{tabs[0].isActive}}">
+        <view class="forbox" wx:for="{{wan}}" wx:key="index">
+            <view class="f-b-top">
+                <view class="uijkw">
+                    <view class="top-tt">
+                        <text>{{item.title}}</text>
+                    </view>
+                    <view class="t-bb-font">
+                        <text>{{item.eachcar_num}}人一车 最快{{item.aquire_number}}天拿证</text>
+                    </view>
+                </view>
+                <view class="sui-io">
+                    <text>预约</text>
+                </view>
+            </view>
+            <view class="f-zopa">
+                <view>
+                    <text>订单编号</text>
+                    <text class="rigto">{{time.dingdan(item.time)}}</text>
+                </view>
+                <view>
+                    <text>下单时间</text>
+                    <text class="rigto">{{time.gettime(item.time)}}</text>
+                </view>
+                <view>
+                    <text>订单金额</text>
+                    <text class="rigto">￥ {{item.price}}</text>
+                </view>
+                <view>
+                    <text>使用优惠券抵扣</text>
+                    <text class="rigto">￥ 0{{item.coupons_price}}</text>
+                </view>
+                <view>
+                    <text>实际支付金额</text>
+                    <text class="rigto">￥ {{item.price}}</text>
+                </view>
+                <view>
+                    <text>联系人</text>
+                    <text class="rigto">{{item.name}}</text>
+                </view>
+                <view>
+                    <text>手机号</text>
+                    <text class="rigto">{{item.phone}}</text>
+                </view>
+                <view>
+                    <text>支付方式</text>
+                    <text class="rigto">线下支付</text>
+                </view>
+            </view>
+            <view class="f-boorr">
+                <view class="uijka">
+                    <text>订单已完成</text>
+                </view>
+                <view class="iokwela">
+                    <text>已完成</text>
+                </view>
+            </view>
+        </view>
+        <view class="forbox" wx:for="{{dai}}" wx:key="index">
+            <view class="f-b-top">
+                <view class="uijkw">
+                    <view class="top-tt">
+                        <text>{{item.title}}</text>
+                    </view>
+                    <view class="t-bb-font">
+                        <text>{{item.eachcar_num}}人一车 最快{{item.aquire_number}}天拿证</text>
+                    </view>
+                </view>
+                <view class="sub-btot">
+                    <text>报名</text>
+                </view>
+            </view>
+            <view class="f-zopa">
+                <view>
+                    <text>订单编号</text>
+                    <text class="rigto">{{time.dingdan(item.time)}}</text>
+                </view>
+                <view>
+                    <text>订单金额</text>
+                    <text class="rigto">￥ {{item.price}}</text>
+                </view>
+            </view>
+            <view class="f-boorr">
+                <view class="uijka">
+                    <text>订单未支付</text>
+                </view>
+                <view wx:if="{{item.price>0}}">
+                    <view bindtap="hiti" class="iolwkqw" data-id="{{item.id}}">
+                        <text>去付款</text>
+                    </view>
+                </view>
+                <view bindtap="canel" class="dawik" data-id="{{item._id}}">
+                    <text>取消</text>
+                </view>
+            </view>
+        </view>
+        <view class="forbox" wx:for="{{shen}}" wx:key="index">
+            <view class="f-b-top">
+                <view class="uijkw">
+                    <view class="top-tt">
+                        <text>{{item.title}}</text>
+                    </view>
+                    <view class="t-bb-font">
+                        <text>{{item.eachcar_num}}人一车 最快{{item.aquire_number}}天拿证</text>
+                    </view>
+                </view>
+                <view class="sub-btot">
+                    <text>报名</text>
+                </view>
+            </view>
+            <view class="f-zopa">
+                <view>
+                    <text>订单编号</text>
+                    <text class="rigto">{{time.dingdan(item.time)}}</text>
+                </view>
+                <view>
+                    <text>下单时间</text>
+                    <text class="rigto">{{time.gettime(item.time)}}</text>
+                </view>
+                <view>
+                    <text>订单金额</text>
+                    <text class="rigto">￥ {{item.price}}</text>
+                </view>
+                <view>
+                    <text>使用优惠券抵扣</text>
+                    <text class="rigto">￥ 0 {{item.coupons_price}}</text>
+                </view>
+                <view>
+                    <text>实际支付金额</text>
+                    <text class="rigto">￥ {{item.price}}{{item.actual_payment}}</text>
+                </view>
+                <view>
+                    <text>联系人</text>
+                    <text class="rigto">{{item.name}}</text>
+                </view>
+                <view>
+                    <text>手机号</text>
+                    <text class="rigto">{{item.phone}}</text>
+                </view>
+                <view>
+                    <text>支付方式</text>
+                    <text class="rigto">线下支付</text>
+                </view>
+            </view>
+            <view class="f-boorr">
+                <view class="uijka">
+                    <text>订单待审核</text>
+                </view>
+                <view class="iokwela">
+                    <text>待审核</text>
+                </view>
+            </view>
+        </view>
+    </block>
+    <block wx:elif="{{tabs[1].isActive}}">
+        <view class="forbox" wx:for="{{dai}}" wx:key="index">
+            <view class="f-b-top">
+                <view class="uijkw">
+                    <view class="top-tt">
+                        <text>{{item.title}}</text>
+                    </view>
+                    <view class="t-bb-font">
+                        <text>{{item.eachcar_num}}人一车 最快{{item.aquire_number}}天拿证</text>
+                    </view>
+                </view>
+                <view class="sub-btot">
+                    <text>报名</text>
+                </view>
+            </view>
+            <view class="f-zopa">
+                <view>
+                    <text>订单编号</text>
+                    <text class="rigto">{{time.dingdan(item.time)}}</text>
+                </view>
+                <view>
+                    <text>订单金额</text>
+                    <text class="rigto">￥ {{item.price}}</text>
+                </view>
+            </view>
+            <view class="f-boorr">
+                <view class="uijka">
+                    <text>订单未支付</text>
+                </view>
+                <view wx:if="{{item.price>0}}">
+                    <view bindtap="hiti" class="iolwkqw" data-id="{{item.id}}">
+                        <text>去付款</text>
+                    </view>
+                </view>
+                <view bindtap="canel" class="dawik" data-id="{{item._id}}">
+                    <text>取消</text>
+                </view>
+            </view>
+        </view>
+    </block>
+    <block wx:elif="{{tabs[2].isActive}}">
+        <view class="forbox" wx:for="{{shen}}" wx:key="index">
+            <view class="f-b-top">
+                <view class="uijkw">
+                    <view class="top-tt">
+                        <text>{{item.title}}</text>
+                    </view>
+                    <view class="t-bb-font">
+                        <text>{{item.eachcar_num}}人一车 最快{{item.aquire_number}}天拿证</text>
+                    </view>
+                </view>
+                <view class="sub-btot">
+                    <text>报名</text>
+                </view>
+            </view>
+            <view class="f-zopa">
+                <view>
+                    <text>订单编号</text>
+                    <text class="rigto">{{time.dingdan(item.time)}}</text>
+                </view>
+                <view>
+                    <text>下单时间</text>
+                    <text class="rigto">{{time.gettime(item.time)}}</text>
+                </view>
+                <view>
+                    <text>订单金额</text>
+                    <text class="rigto">￥ {{item.price}}</text>
+                </view>
+                <view>
+                    <text>使用优惠券抵扣</text>
+                    <text class="rigto">￥ 0 {{item.coupons_price}}</text>
+                </view>
+                <view>
+                    <text>实际支付金额</text>
+                    <text class="rigto">￥ {{item.now}}</text>
+                </view>
+                <view>
+                    <text>联系人</text>
+                    <text class="rigto">{{item.name}}</text>
+                </view>
+                <view>
+                    <text>手机号</text>
+                    <text class="rigto">{{item.phone}}</text>
+                </view>
+                <view>
+                    <text>支付方式</text>
+                    <text class="rigto">线下支付</text>
+                </view>
+            </view>
+            <view class="f-boorr">
+                <view class="uijka">
+                    <text>订单待审核</text>
+                </view>
+                <view class="iokwela">
+                    <text>待审核</text>
+                </view>
+            </view>
+        </view>
+    </block>
+    <!-- <block wx:elif="{{tabs[3].isActive}}">
+        <view class="forbox" wx:for="{{dai}}" wx:key="index">
+            <view class="f-b-top">
+                <view class="uijkw">
+                    <view class="top-tt">
+                        <text>{{item.title}}</text>
+                    </view>
+                    <view class="t-bb-font">
+                        <text>{{item.eachcar_num}}人一车 最快{{item.aquire_number}}天拿证</text>
+                    </view>
+                </view>
+                <view class="sub-btot">
+                    <text>报名</text>
+                </view>
+            </view>
+            <view class="f-zopa">
+                <view>
+                    <text>订单编号</text>
+                    <text class="rigto">{{time.dingdan(item.time)}}</text>
+                </view>
+                <view>
+                    <text>下单时间</text>
+                    <text class="rigto">{{time.gettime(item.time)}}</text>
+                </view>
+                <view>
+                    <text>订单金额</text>
+                    <text class="rigto">￥ {{item.price}}</text>
+                </view>
+                <view>
+                    <text>联系人</text>
+                    <text class="rigto">{{item.name}}</text>
+                </view>
+                <view>
+                    <text>手机号</text>
+                    <text class="rigto">{{item.phone}}</text>
+                </view>
+            </view>
+            <view class="f-boorr">
+                <view class="uijka">
+                    <text>订单已取消</text>
+                </view>
+                <view class="iokwela">
+                    <text>已取消</text>
+                </view>
+            </view>
+        </view>
+    </block> -->
+</Tabs>
+
+<wxs module="time" src="/components/time.wxs"></wxs>

@@ -1,0 +1,51 @@
+<view class="tab-top">
+    <view class="my-tow">
+        <image class="my-tow-img" src="/icons/denglubeijing.png"></image>
+    </view>
+    <view class="my-logo">
+        <view class="my-top">
+            <image class="logo-img" src="{{avatarurl}}"></image>
+        </view>
+        <view class="my-name">
+            <text>{{nickName}}</text>
+        </view>
+        <view class="oilwe">
+            <image class="phone-img" src="/icons/phone.png"></image>
+            <text class="margio">{{info.phone}}</text>
+        </view>
+    </view>
+</view>
+<view class="topo">
+    <view bindtap="York" class="polia">
+        <image class="grzx1-img" src="/icons/grzx1.png"></image>
+        <text class="fonttre">审核报名</text>
+        <image class="aaa9img" src="/icons/jiantou.png"></image>
+    </view>
+    <view bindtap="comment" class="polia">
+        <image class="grzx1-img" src="/icons/grzx2.png"></image>
+        <text class="fonttre">信息发布</text>
+        <image class="aaa9img" src="/icons/jiantou.png"></image>
+    </view>
+    <view bindtap="goto" class="polia" data-url="/pages/my/coach/car/car">
+        <image class="grzx1-img" src="/icons/student.png"></image>
+        <text class="fonttre">驾校管理</text>
+        <image class="aaa9img" src="/icons/jiantou.png"></image>
+    </view>
+    <view bindtap="goto" class="polia" data-url="/pages/my/coach/car/car">
+        <image class="grzx1-img" src="/icons/time.png"></image>
+        <text class="fonttre">优惠券发布</text>
+        <image class="aaa9img" src="/icons/jiantou.png"></image>
+    </view>
+    <view bindtap="goto" class="polia" data-url="/pages/my/coach/car/car">
+        <image class="grzx1-img" src="/icons/time.png"></image>
+        <text class="fonttre">教练/管理员审核</text>
+        <image class="aaa9img" src="/icons/jiantou.png"></image>
+    </view>
+</view>
+<view class="topo">
+    <view bindtap="personal" class="polia">
+        <image class="grzx1-img" src="/icons/grzx3.png"></image>
+        <text class="fonttre">个人资料</text>
+        <image class="aaa9img" src="/icons/jiantou.png"></image>
+    </view>
+</view>

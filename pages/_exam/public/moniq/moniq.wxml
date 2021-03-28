@@ -1,0 +1,327 @@
+<template name="answer">
+  <view class="all-wrap" wx:if="{{!iconInd}}">
+    <scroll-view scrollY style="height:100%;">
+      <view bindtouchend="bindtouchend" bindtouchmove="bindtouchmove" bindtouchstart="touchstart" class="answer-wrap"
+        wx:if="{{textTab!='背题模式' && downContent.type_name!='多选'}}">
+        <view class="answer-title">
+          <image src="/images/jkt/danxuan.png" wx:if="{{downContent.type_name=='单选'}}"></image>
+          <image src="/images/jkt/panduan.png" wx:if="{{downContent.type_name=='判断'}}"></image>
+          <view style="width:100%">
+            <text>{{downContent.question}}</text>
+            <text wx:if="{{testMode}}">{{downContent.question_id}} 答案：{{downContent.answer}}</text>
+          </view>
+        </view>
+        <view class="answer-ziyuan">
+          <image mode="aspectFit" src="{{downContent.media}}" wx:if="{{downContent.media_type=='1'}}"></image>
+        </view>
+        <view class="answer-select">
+          <view bindtap="selectAnswer" class="direction" data-answer="{{downContent.answer}}"
+            data-id="{{downContent.question_id}}" data-ind="{{ind}}" wx:if="{{downContent.category<2}}"
+            wx:for="{{downContent.options}}" wx:for-index="ind" wx:for-item="itemName" wx:key="index">
+            <view class="answer-left">
+              <text class="option"
+                wx:if="{{downContent['order']['down']!=ind&&downContent['order']['answer']!=ind}}">{{ind}}</text>
+              <image src="/images/jkt/error.png"
+                wx:if="{{downContent['order']['down']!=downContent['order']['answer']&&downContent['order']['down']==ind}}">
+              </image>
+              <image src="/images/jkt/success.png" wx:if="{{downContent['order']['answer']==ind}}"></image>
+            </view>
+            <view class="answer-right">
+              <text class="green-active"
+                wx:if="{{downContent['answer']==ind&&downContent['order']['down']}}">{{itemName}}</text>
+              <text class="red-active"
+                wx:if="{{downContent['order']['down']==ind&&downContent['answer']!=ind}}">{{itemName}}</text>
+              <text class="text"
+                wx:if="{{downContent['order']['down']!=ind&&!( downContent['answer']==ind&&downContent['order']['down'] )}}">{{itemName}}</text>
+            </view>
+          </view>
+          <view bindtap="selectAnswer" class="direction" data-answer="{{downContent.answer}}"
+            data-id="{{downContent.question_id}}" data-ind="{{ind}}"
+            style="width:50%;padding:0;float:left;background:#fff;" wx:if="{{downContent.category>=2}}"
+            wx:for="{{downContent.options}}" wx:for-index="ind" wx:for-item="itemName" wx:key="index">
+            <view class="answer-left">
+              <text class="option"
+                wx:if="{{downContent['order']['down']!=ind&&downContent['order']['answer']!=ind}}">{{ind}}</text>
+              <image src="/images/jkt/error.png"
+                wx:if="{{downContent['order']['down']!=downContent['order']['answer']&&downContent['order']['down']==ind}}">
+              </image>
+              <image src="/images/jkt/success.png" wx:if="{{downContent['order']['answer']==ind}}"></image>
+            </view>
+            <view class="answer-right" style="height:120px;width:80%;display: flex;flex-direction: column"
+              wx:if="{{downContent.category=='2'}}">
+              <image mode="aspectFit"
+                src="http://picture.eclicks.cn/kaojiazhao/public/pics/question/course1/{{itemName}}"
+                wx:if="{{downContent.course==1}}"></image>
+              <image mode="aspectFit"
+                src="http://picture.eclicks.cn/kaojiazhao/public/pics/question/course3/{{itemName}}"
+                wx:if="{{downContent.course==3}}"></image>
+            </view>
+            <view class="answer-right" style="height:150px;width:80%;display: flex;flex-direction: column"
+              wx:if="{{downContent.category=='3'}}">
+              <image mode="aspectFit"
+                src="http://picture.eclicks.cn/kaojiazhao/public/pics/question/course1/{{itemName.media}}"
+                wx:if="{{downContent.course==1}}"></image>
+              <image mode="aspectFit"
+                src="http://picture.eclicks.cn/kaojiazhao/public/pics/question/course3/{{itemName.media}}"
+                wx:if="{{downContent.course==3}}"></image>
+              <text class="green-active"
+                wx:if="{{downContent['answer']==ind&&downContent['order']['down']}}">{{itemName.content}}</text>
+              <text class="red-active"
+                wx:if="{{downContent['order']['down']==ind&&downContent['answer']!=ind}}">{{itemName.content}}</text>
+              <text class="text"
+                wx:if="{{downContent['order']['down']!=ind&&!( downContent['answer']==ind&&downContent['order']['down'] )}}">{{itemName.content}}</text>
+            </view>
+          </view>
+        </view>
+        <view class="explantion" wx:if="{{downContent['order']['down']}}">
+          <view class="explanation-title">
+            <view class="explanation-left">解释</view>
+          </view>
+          <view class="explanation-text">{{downContent.comments}}</view>
+        </view>
+      </view>
+      <view bindtouchend="bindtouchend" bindtouchmove="bindtouchmove" bindtouchstart="touchstart" class="answer-wrap"
+        wx:if="{{textTab=='背题模式' && downContent.type_name!='多选'}}">
+        <view class="answer-title">
+          <image src="/images/jkt/danxuan.png" wx:if="{{downContent.type_name=='单选'}}"></image>
+          <image src="/images/jkt/panduan.png" wx:if="{{downContent.type_name=='判断'}}"></image>
+          <view style="width:100%">
+            <text>{{downContent.question}}</text>
+            <text wx:if="{{testMode}}">{{downContent.question_id}} 答案：{{downContent.answer}}</text>
+          </view>
+        </view>
+        <view class="answer-ziyuan">
+          <image mode="aspectFit" src="{{downContent.media}}" wx:if="{{downContent.media_type=='1'}}"></image>
+        </view>
+        <view class="answer-select" wx:if="{{!downContent['order']['down']}}">
+          <view bindtap="selectAnswer" class="direction" data-answer="{{downContent.answer}}"
+            data-id="{{downContent.question_id}}" data-ind="{{ind}}" wx:if="{{downContent.category<2}}"
+            wx:for="{{downContent.options}}" wx:for-index="ind" wx:for-item="itemName" wx:key="index">
+            <view class="answer-left">
+              <text class="option" wx:if="{{downContent['answer']!=ind}}">{{ind}}</text>
+              <image src="/images/jkt/success.png" wx:if="{{downContent['answer']==ind}}"></image>
+            </view>
+            <view class="answer-right">
+              <text class="{{downContent['answer']==ind?'green-active':'text'}}">{{itemName}}</text>
+            </view>
+          </view>
+          <view bindtap="selectAnswer" class="direction" data-answer="{{downContent.answer}}"
+            data-id="{{downContent.question_id}}" data-ind="{{ind}}"
+            style="width:50%;padding:0;float:left;background:#fff;" wx:if="{{downContent.category>=2}}"
+            wx:for="{{downContent.options}}" wx:for-index="ind" wx:for-item="itemName" wx:key="index">
+            <view class="answer-left">
+              <text class="option" wx:if="{{downContent['answer']!=ind}}">{{ind}}</text>
+              <image src="/images/jkt/success.png" wx:if="{{downContent['answer']==ind}}"></image>
+            </view>
+            <view class="answer-right" style="height:120px;width:80%;display: flex;flex-direction: column"
+              wx:if="{{downContent.category=='2'}}">
+              <image mode="aspectFit"
+                src="http://picture.eclicks.cn/kaojiazhao/public/pics/question/course1/{{itemName}}"
+                wx:if="{{downContent.course==1}}"></image>
+              <image mode="aspectFit"
+                src="http://picture.eclicks.cn/kaojiazhao/public/pics/question/course3/{{itemName}}"
+                wx:if="{{downContent.course==3}}"></image>
+            </view>
+            <view class="answer-right" style="height:150px;width:80%;display: flex;flex-direction: column"
+              wx:if="{{downContent.category=='3'}}">
+              <image mode="aspectFit"
+                src="http://picture.eclicks.cn/kaojiazhao/public/pics/question/course1/{{itemName.media}}"
+                wx:if="{{downContent.course==1}}"></image>
+              <image mode="aspectFit"
+                src="http://picture.eclicks.cn/kaojiazhao/public/pics/question/course3/{{itemName.media}}"
+                wx:if="{{downContent.course==3}}"></image>
+              <text class="{{downContent['answer']==ind?'green-active':'text'}}">{{itemName.content}}</text>
+            </view>
+          </view>
+        </view>
+        <view class="answer-select" wx:if="{{downContent['order']['down']}}">
+          <view bindtap="selectAnswer" class="direction" data-answer="{{downContent.answer}}"
+            data-id="{{downContent.question_id}}" data-ind="{{ind}}" wx:if="{{downContent.category<2}}"
+            wx:for="{{downContent.options}}" wx:for-index="ind" wx:for-item="itemName" wx:key="index">
+            <view class="answer-left">
+              <text class="option"
+                wx:if="{{downContent['order']['down']!=ind&&downContent['order']['answer']!=ind}}">{{ind}}</text>
+              <image src="/images/jkt/error.png"
+                wx:if="{{downContent['order']['down']!=downContent['order']['answer']&&downContent['order']['down']==ind}}">
+              </image>
+              <image src="/images/jkt/success.png" wx:if="{{downContent['order']['answer']==ind}}"></image>
+            </view>
+            <view class="answer-right">
+              <text class="green-active"
+                wx:if="{{downContent['answer']==ind&&downContent['order']['down']}}">{{itemName}}</text>
+              <text class="red-active"
+                wx:if="{{downContent['order']['down']==ind&&downContent['answer']!=ind}}">{{itemName}}</text>
+              <text class="text"
+                wx:if="{{downContent['order']['down']!=ind&&!( downContent['answer']==ind&&downContent['order']['down'] )}}">{{itemName}}</text>
+            </view>
+          </view>
+          <view bindtap="selectAnswer" class="direction" data-answer="{{downContent.answer}}"
+            data-id="{{downContent.question_id}}" data-ind="{{ind}}"
+            style="width:50%;padding:0;float:left;background:#fff;" wx:if="{{downContent.category>=2}}"
+            wx:for="{{downContent.options}}" wx:for-index="ind" wx:for-item="itemName" wx:key="index">
+            <view class="answer-left">
+              <text class="option"
+                wx:if="{{downContent['order']['down']!=ind&&downContent['order']['answer']!=ind}}">{{ind}}</text>
+              <image src="/images/jkt/error.png"
+                wx:if="{{downContent['order']['down']!=downContent['order']['answer']&&downContent['order']['down']==ind}}">
+              </image>
+              <image src="/images/jkt/success.png" wx:if="{{downContent['order']['answer']==ind}}"></image>
+            </view>
+            <view class="answer-right" style="height:120px;width:80%;display: flex;flex-direction: column"
+              wx:if="{{downContent.category=='2'}}">
+              <image mode="aspectFit"
+                src="http://picture.eclicks.cn/kaojiazhao/public/pics/question/course1/{{itemName}}"
+                wx:if="{{downContent.course==1}}"></image>
+              <image mode="aspectFit"
+                src="http://picture.eclicks.cn/kaojiazhao/public/pics/question/course3/{{itemName}}"
+                wx:if="{{downContent.course==3}}"></image>
+            </view>
+            <view class="answer-right" style="height:150px;width:80%;display: flex;flex-direction: column"
+              wx:if="{{downContent.category=='3'}}">
+              <image mode="aspectFit"
+                src="http://picture.eclicks.cn/kaojiazhao/public/pics/question/course1/{{itemName.media}}"
+                wx:if="{{downContent.course==1}}"></image>
+              <image mode="aspectFit"
+                src="http://picture.eclicks.cn/kaojiazhao/public/pics/question/course3/{{itemName.media}}"
+                wx:if="{{downContent.course==3}}"></image>
+              <text class="green-active"
+                wx:if="{{downContent['answer']==ind&&downContent['order']['down']}}">{{itemName.content}}</text>
+              <text class="red-active"
+                wx:if="{{downContent['order']['down']==ind&&downContent['answer']!=ind}}">{{itemName.content}}</text>
+              <text class="text"
+                wx:if="{{downContent['order']['down']!=ind&&!( downContent['answer']==ind&&downContent['order']['down'] )}}">{{itemName.content}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view bindtouchend="bindtouchend" bindtouchmove="bindtouchmove" bindtouchstart="touchstart" class="answer-wrap"
+        wx:if="{{textTab!='背题模式' && downContent.type_name=='多选'}}">
+        <view class="answer-title">
+          <image src="/images/jkt/duoxuan.png" wx:if="{{downContent.type_name=='多选'}}"></image>
+          <view>{{downContent.question}}
+            <text wx:if="{{testMode}}">{{downContent.question_id}} 答案：{{downContent.answer}}</text>
+          </view>
+        </view>
+        <view class="answer-ziyuan">
+          <image mode="aspectFit" src="{{downContent.media}}" wx:if="{{downContent.media_type=='1'}}"></image>
+        </view>
+        <view class="answer-select">
+          <view bindtap="selectAnswerMore" class="direction" data-answer="{{downContent.answer}}"
+            data-id="{{downContent.question_id}}" data-ind="{{ind}}" data-qutype="{{downContent.type_name}}"
+            wx:for="{{downContent.options}}" wx:for-index="ind" wx:for-item="itemName" wx:key="index">
+            <view class="answer-left">
+              <!--未提交-->
+              <text
+                class="{{downContent['order']['down'][ind]&&downContent['order']['subup']=='0'?'option-active':'option'}}"
+                wx:if="{{downContent['order']['subup']=='0'}}">{{ind}}</text>
+              <!--已提交-->
+              <text
+                class="{{downContent['order']['down'][ind]&&downContent['order']['subup']=='0'?'option-active':'option'}}"
+                wx:if="{{downContent['order']['subup']=='1'&&downContent['order']['down'][ind]==false&&downContent['answerArr'][0]!=ind&&downContent['answerArr'][1]!=ind&&downContent['answerArr'][2]!=ind&&downContent['answerArr'][3]!=ind}}">{{ind}}</text>
+              <text class="option-green"
+                wx:if="{{downContent['order']['down'][ind]==false&&downContent['order']['subup']=='1'&&(downContent['answerArr'][0]==ind||downContent['answerArr'][1]==ind||downContent['answerArr'][2]==ind||downContent['answerArr'][3]==ind)}}">{{ind}}</text>
+              <image src="/images/jkt/error.png"
+                wx:if="{{downContent['order']['down'][ind]==true&&downContent['order']['subup']=='1'&&downContent['answerArr'][0]!=ind&&downContent['answerArr'][1]!=ind&&downContent['answerArr'][2]!=ind&&downContent['answerArr'][3]!=ind}}">
+              </image>
+              <image src="/images/jkt/success.png"
+                wx:if="{{downContent['order']['down'][ind]==true&&downContent['order']['subup']=='1'&&(downContent['answerArr'][0]==ind||downContent['answerArr'][1]==ind||downContent['answerArr'][2]==ind||downContent['answerArr'][3]==ind)}}">
+              </image>
+            </view>
+            <view class="answer-right">
+              <text
+                class="{{downContent['order']['down'][ind]&&downContent['order']['subup']=='0'?'text-active':'text'}}"
+                wx:if="{{downContent['order']['subup']=='0'}}">{{itemName}}</text>
+              <text class="text"
+                wx:if="{{downContent['order']['subup']=='1'&&downContent['order']['down'][ind]==false&&downContent['answerArr'][0]!=ind&&downContent['answerArr'][1]!=ind&&downContent['answerArr'][2]!=ind&&downContent['answerArr'][3]!=ind}}">{{itemName}}</text>
+              <text class="red-active"
+                wx:if="{{downContent['order']['subup']=='1'&&downContent['order']['down'][ind]==true&&downContent['answerArr'][0]!=ind&&downContent['answerArr'][1]!=ind&&downContent['answerArr'][2]!=ind&&downContent['answerArr'][3]!=ind}}">{{itemName}}</text>
+              <text class="green-active"
+                wx:if="{{downContent['order']['subup']=='1'&&(downContent['answerArr'][0]==ind||downContent['answerArr'][1]==ind||downContent['answerArr'][2]==ind||downContent['answerArr'][3]==ind)}}">{{itemName}}</text>
+            </view>
+          </view>
+        </view>
+        <view class="explanation" wx:if="{{downContent['order']['subup']=='1'}}">
+          <view class="explanation-title">
+            <view class="explanation-left">解释</view>
+          </view>
+          <view class="explanation-text">{{downContent.comments}}</view>
+        </view>
+        <view style="height:40px;" wx:if="{{downContent['order']['subup']=='1'}}"></view>
+        <view style="padding-bottom:20rpx;"
+          wx:if="{{downContent['order']['subup']!='1'&&textTab!='背题模式'&&downContent.type_name=='多选'}}">
+          <view bindtap="moreSelectSub" class="sunup" data-answer="{{downContent.answer}}"
+            data-id="{{downContent.question_id}}">提交</view>
+        </view>
+      </view>
+      <view bindtouchend="bindtouchend" bindtouchmove="bindtouchmove" bindtouchstart="touchstart" class="answer-wrap"
+        wx:if="{{textTab=='背题模式'&&downContent.type_name=='多选'}}">
+        <view class="answer-title">
+          <image src="/images/jkt/duoxuan.png" wx:if="{{downContent.type_name=='多选'}}"></image>
+          <view>{{downContent.question}}
+            <text wx:if="{{testMode}}">{{downContent.question_id}} 答案：{{downContent.answer}}</text>
+          </view>
+        </view>
+        <view class="answer-ziyuan">
+          <image mode="aspectFit" src="{{downContent.media}}" wx:if="{{downContent.media_type=='1'}}"></image>
+        </view>
+        <view class="answer-select" wx:if="{{downContent['order']['subup']!='1'}}">
+          <view bindtap="selectAnswer" class="direction" data-answer="{{downContent.answer}}"
+            data-id="{{downContent.question_id}}" data-ind="{{ind}}" wx:for="{{downContent.options}}" wx:for-index="ind"
+            wx:for-item="itemName" wx:key="index">
+            <view class="answer-left">
+              <text class="option"
+                wx:if="{{downContent['answerArr'][0]!=ind&&downContent['answerArr'][1]!=ind&&downContent['answerArr'][2]!=ind&&downContent['answerArr'][3]!=ind}}">{{ind}}</text>
+              <image src="/images/jkt/success.png"
+                wx:if="{{downContent['answerArr'][0]==ind||downContent['answerArr'][1]==ind||downContent['answerArr'][2]==ind||downContent['answerArr'][3]==ind}}">
+              </image>
+            </view>
+            <view class="answer-right">
+              <text
+                class="{{downContent['answerArr'][0]==ind||downContent['answerArr'][1]==ind||downContent['answerArr'][2]==ind||downContent['answerArr'][3]==ind?'green-active':'text'}}">{{itemName}}</text>
+            </view>
+          </view>
+        </view>
+        <view class="answer-select" wx:if="{{downContent['order']['subup']=='1'}}">
+          <view bindtap="selectAnswerMore" class="direction" data-answer="{{downContent.answer}}"
+            data-id="{{downContent.question_id}}" data-ind="{{ind}}" data-qutype="{{downContent.type_name}}"
+            wx:for="{{downContent.options}}" wx:for-index="ind" wx:for-item="itemName" wx:key="index">
+            <view class="answer-left">
+              <text
+                class="{{downContent['order']['down'][ind]&&downContent['order']['subup']=='0'?'option-active':'option'}}"
+                wx:if="{{downContent['order']['subup']=='0'}}">{{ind}}</text>
+              <text
+                class="{{downContent['order']['down'][ind]&&downContent['order']['subup']=='0'?'option-active':'option'}}"
+                wx:if="{{downContent['order']['subup']=='1'&&downContent['order']['down'][ind]==false&&downContent['answerArr'][0]!=ind&&downContent['answerArr'][1]!=ind&&downContent['answerArr'][2]!=ind&&downContent['answerArr'][3]!=ind}}">{{ind}}</text>
+              <text class="option-green"
+                wx:if="{{downContent['order']['down'][ind]==false&&downContent['order']['subup']=='1'&&(downContent['answerArr'][0]==ind||downContent['answerArr'][1]==ind||downContent['answerArr'][2]==ind||downContent['answerArr'][3]==ind)}}">{{ind}}</text>
+              <image src="/images/jkt/error.png"
+                wx:if="{{downContent['order']['down'][ind]==true&&downContent['order']['subup']=='1'&&downContent['answerArr'][0]!=ind&&downContent['answerArr'][1]!=ind&&downContent['answerArr'][2]!=ind&&downContent['answerArr'][3]!=ind}}">
+              </image>
+              <image src="/images/jkt/success.png"
+                wx:if="{{downContent['order']['down'][ind]==true&&downContent['order']['subup']=='1'&&(downContent['answerArr'][0]==ind||downContent['answerArr'][1]==ind||downContent['answerArr'][2]==ind||downContent['answerArr'][3]==ind)}}">
+              </image>
+            </view>
+            <view class="answer-right">
+              <text
+                class="{{downContent['order']['down'][ind]&&downContent['order']['subup']=='0'?'text-active':'text'}}"
+                wx:if="{{downContent['order']['subup']=='0'}}">{{itemName}}</text>
+              <text class="text"
+                wx:if="{{downContent['order']['subup']=='1'&&downContent['order']['down'][ind]==false&&downContent['answerArr'][0]!=ind&&downContent['answerArr'][1]!=ind&&downContent['answerArr'][2]!=ind&&downContent['answerArr'][3]!=ind}}">{{itemName}}</text>
+              <text class="red-active"
+                wx:if="{{downContent['order']['subup']=='1'&&downContent['order']['down'][ind]==true&&downContent['answerArr'][0]!=ind&&downContent['answerArr'][1]!=ind&&downContent['answerArr'][2]!=ind&&downContent['answerArr'][3]!=ind}}">{{itemName}}</text>
+              <text class="green-active"
+                wx:if="{{downContent['order']['subup']=='1'&&(downContent['answerArr'][0]==ind||downContent['answerArr'][1]==ind||downContent['answerArr'][2]==ind||downContent['answerArr'][3]==ind)}}">{{itemName}}</text>
+            </view>
+          </view>
+        </view>
+        <view class="explanation">
+          <view class="explanation-title">
+            <view class="explanation-left">解释</view>
+          </view>
+          <view class="explanation-text">{{downContent.comments}}</view>
+        </view>
+      </view>
+      <view style="height:100px;width:100%;background:#f5f6f7" wx:if="{{textTab!='背题模式'}}"></view>
+    </scroll-view>
+  </view>
+</template>

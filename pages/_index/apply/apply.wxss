@@ -1,0 +1,154 @@
+page {
+  background-color: #f4f5f7;
+}
+
+.top {
+  width: 100%;
+  height: 150rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+  font-size: 32rpx;
+}
+
+.t-top {
+  width: 100%;
+  line-height: 90rpx;
+}
+
+.t-top-text {
+  margin-left: 25rpx;
+  font-weight: bold;
+}
+
+.t-top-right {
+  float: right;
+  margin-right: 25rpx;
+  color: red;
+  font-size: 28rpx;
+}
+
+.t-butt {
+  width: 727rpx;
+  font-size: 28rpx;
+  position: relative;
+}
+
+.t-bu-left {
+  width: 100%;
+  margin-left: 24rpx;
+  font-size: 10px;
+}
+
+.fontss {
+  margin-left: 4rpx;
+  background-color: #d2effd;
+  color: #5ea3f3;
+  padding: 5rpx;
+}
+
+.tt-dsa {
+  position: absolute;
+  right: 0rpx;
+  top: -4rpx;
+  font-size: 25rpx;
+  color: #a4a4a4;
+}
+
+.text-eww {
+  width: 100%;
+  height: 74rpx;
+  font-size: 28rpx;
+  line-height: 74rpx;
+  color: #a8a8aa;
+}
+
+.dadww {
+  margin-left: 25rpx;
+}
+
+.inutds {
+  width: 100%;
+  height: 300rpx;
+  background-color: #fff;
+  font-size: 28rpx;
+}
+
+.bord-saa {
+  display: flex;
+  /* width: 727rpx; */
+  height: 100rpx;
+  position: relative;
+  border-bottom: 1px solid #f4f5f7;
+}
+
+.id1{
+  flex:1;
+  height: 100%;
+  padding: 15rpx;
+}
+
+.id{
+  flex:1;
+  height: 100%;
+  padding: 35rpx;
+}
+
+.dawee {
+  width: 150rpx;
+  height: 100%;
+  margin-left: 20rpx;
+  line-height: 100rpx;
+}
+
+.posla {
+  flex:5;
+  /* background-color: #a4a4a4; */
+  height: 100%;
+  /* position: absolute; */
+  top: 0rpx;
+  left: 171rpx;
+  line-height: 100rpx;
+}
+
+.cont {
+  width: 100%;
+  height: 100%;
+  font-size: 28rpx;
+}
+
+.dabito {
+  background-color: #fff;
+  font-size: 30rpx;
+  padding: 30rpx;
+  line-height: 52rpx;
+  font-family: '微软雅黑';
+}
+
+.dwwpow {
+  width: 100%;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  color: #fff;
+  position: fixed;
+  bottom: 0rpx;
+  /* background-color: #1daeef; */
+}
+
+.height {
+  height: 100rpx;
+}
+
+.retDesc {
+  text-align: center;
+  font-size: 34rpx;
+  color: #aaa8a8;
+}
+
+.iowk {
+  width: 300rpx;
+  height: 300rpx;
+  margin: 0 auto;
+  margin-top: 100rpx;
+}

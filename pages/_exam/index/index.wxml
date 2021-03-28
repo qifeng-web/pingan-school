@@ -1,0 +1,158 @@
+<!--index.wxml-->
+<view bind:touchmove="scroll_end" class="subject1">
+    <view class="tab-wrap" wx:if="{{showtarbar}}">
+        <view class="tab">
+            <view bindtap="changeTab" class="tab-item" data-tabname="{{item.name}}" data-textTab="{{item.course}}"
+                wx:for="{{courseList}}" wx:key="index">
+                <text class="{{selectIndex==item.course?'blue':''}}">{{item.name}}</text>
+                <span class="{{selectIndex==item.course?'span':''}}"></span>
+            </view>
+        </view>
+    </view>
+    <view style="height: 80rpx;" wx:if="{{showtarbar}}"></view>
+    <view class="header" wx:if="{{selectIndex==item.course}}" wx:for="{{courseList}}" wx:key="index">
+        <view class="header-wrap">
+            <view bindtap="headerMenu" data-ind="{{index}}" data-title="{{menu}}" wx:for="{{item.menuList}}"
+                wx:for-item="menu" wx:key="index">{{menu}}</view>
+        </view>
+        <image class="header-bg" src="http://picture.eclicks.cn/kaojiazhao/public/wx_xcx/start/home-title.jpg"></image>
+    </view>
+    <!-- <component-banner wx:if="{{selectIndex=='v2'||selectIndex=='v3'}}"></component-banner> -->
+    <view wx:if="{{selectIndex=='1'||selectIndex=='3'}}">
+        <!-- <view class="header" wx:if="{{selectIndex==item.course}}" wx:for="{{courseList}}" wx:key="index">
+        <view class="header-wrap">
+            <view bindtap="headerMenu" data-ind="{{index}}" data-title="{{menu}}" wx:for="{{item.menuList}}" wx:for-item="menu" wx:key="index">{{menu}}</view>
+        </view>
+        <image class="header-bg" src="http://picture.eclicks.cn/kaojiazhao/public/wx_xcx/start/home-title.jpg"></image>
+    </view> -->
+        <view class="question-wrap">
+            <view class="question">
+                <view class="left">
+                    <view bindtap="orderGo" class="home-icon" data-mode="2">
+                        <form bindsubmit="formSubmit_random" reportSubmit="true">
+                            <button class="home-icon" formType="submit">
+                                <image mode="aspectFit" src="/images/sjlx.png"></image>
+                                <text>随机练习</text>
+                            </button>
+                        </form>
+                    </view>
+                </view>
+                <view bindtap="orderGo" class="center">
+                    <form bindsubmit="formSubmit_order" reportSubmit="true">
+                        <button formType="submit">
+                            <view class="progress-bg">
+                                <view class="progress-wrap">
+                                    <view class="progress-title">顺序练习</view>
+                                    <text>{{afternum}}/{{questionnum}}</text>
+                                </view>
+                                <image mode="widthFix" src="/images/green.png"></image>
+                            </view>
+                        </button>
+                    </form>
+                </view>
+                <view class="right">
+                    <view bindtap="defaultGo" class="home-icon" data-ind="0">
+                        <form bindsubmit="formSubmit_error" reportSubmit="true">
+                            <button class="home-icon" formType="submit">
+                                <image mode="aspectFit" src="/images/wdct.png"></image>
+                                <view class="ct-num" wx:if="{{ctNum>0}}">{{ctNum<=99?ctNum:99}}<text class="ct-num-icon"
+                                        wx:if="{{ctNum>99}}">+</text>
+                                    <text style="padding-right:5rpx" wx:if="{{ctNum>99}}"></text>
+                                </view>
+                                <text>我的错题</text>
+                            </button>
+                        </form>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="question-wrap">
+            <view class="question">
+                <view class="left">
+                    <view bindtap="gradeGo" class="home-icon" data-ind="2">
+                        <form bindsubmit="formSubmit_grade" reportSubmit="true">
+                            <button class="home-icon" formType="submit">
+                                <image mode="aspectFit" src="/images/wdcj.png"></image>
+                                <text>我的成绩</text>
+                            </button>
+                        </form>
+                    </view>
+                </view>
+                <view bindtap="examGo" class="center">
+                    <form bindsubmit="formSubmit_exam" reportSubmit="true">
+                        <button formType="submit">
+                            <view class="progress-bg">
+                                <view class="progress-wrap progress-wrap-blue">
+                                    <view class="progress-title">模拟考试</view>
+                                    <text wx:if="{{maxf=='no'}}">100%仿真</text>
+                                    <text wx:if="{{maxf!='no'}}">最佳成绩{{maxf}}分</text>
+                                </view>
+                                <image mode="widthFix" src="/images/blue.png"></image>
+                            </view>
+                        </button>
+                    </form>
+                </view>
+                <view class="right">
+                    <view bindtap="defaultGo" class="home-icon" data-ind="1">
+                        <image mode="aspectFit" src="/images/wdsc.png"></image>
+                        <text>我的收藏</text>
+                    </view>
+                    <!-- <view bindtap="headerMenu" class="home-icon">
+                        <form bindsubmit="formSubmit_rank" reportSubmit="true">
+                            <button class="home-icon" formType="submit">
+                                <image mode="aspectFit" src="/images/zxlx.png"></image>
+                                <text>图标速记</text>
+                            </button>
+                        </form>
+                    </view> -->
+                </view>
+            </view>
+        </view>
+        <component-banner></component-banner>
+        <view class="God-wrap">
+            <view class="God-title">
+                <image mode="widthFix" src="/images/jiangb.png"></image>
+                <text style="color:#000;font-size:27rpx">必过神器 </text>
+                <text style="color:#666666;font-size:23rpx;margin-left:10rpx;"> | 神器在手 驾照我有</text>
+            </view>
+        </view>
+        <!-- <view class="cell-wrap cell-one">
+            <view bindtap="headerMenu" class="cell">
+                <view class="cell-left">
+                    <image src="/images/zxlx.png"></image>
+                    <text>图标速记</text>
+                </view>
+                <view class="cell-right">
+                    <image src="/images/right.png"></image>
+                </view>
+            </view>
+        </view> -->
+        <view class="cell-wrap cell-one">
+            <view bindtap="myQuestion" class="cell">
+                <view class="cell-left">
+                    <image src="/images/icon_school.png"></image>
+                    <text>我的题库</text>
+                </view>
+                <view class="cell-right">
+                    <text>{{car}}</text>
+                    <image src="/images/right.png"></image>
+                </view>
+            </view>
+        </view>
+        <view class="cell-wrap" style="margin-bottom:88rpx;"></view>
+    </view>
+    <video-list id="video-list" wx:if="{{selectIndex=='v2'||selectIndex=='v3'}}"></video-list>
+</view>
+<view class="warrant" wx:if="{{!is_login}}">
+    <view class='white'>
+        <view class='tap'>您还未登录</view>
+        <view class='tip'>请先登录再进行操作</view>
+        <view class='pictrue'></view>
+        <view style='display:flex;'>
+            <button class='no' type="primary" bindtap='login' lang="zh_CN">暂不登录</button>
+            <button class='but' type="primary" open-type="getUserInfo" lang="zh_CN"
+                bindgetuserinfo="bindgetuserinfo">立即登录</button>
+        </view>
+    </view>
+    <view class='mask'></view>
+</view>

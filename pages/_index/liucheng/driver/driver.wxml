@@ -1,0 +1,46 @@
+<view class="top">
+    <text>为您定制专属的学习内容</text>
+</view>
+<view class="bo">
+    <view class="bo-text">
+        <text>请选择您的性别</text>
+    </view>
+    <view class="bo-bott">
+        <view class="bo-img">
+            <image class="xctou-img" src="/icons/xctou1.png"></image>
+            <image class="XCimig" src="/icons/XC-PO.jpg"></image>
+            <view class="mattop">
+                <text>男士</text>
+            </view>
+        </view>
+        <view class="bo-img">
+            <image class="xctou-img" src="/icons/xctou2.png"></image>
+            <view class="mattop">
+                <text>女士</text>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="bo">
+    <view class="bo-text">
+        <text>是否完成驾校报名</text>
+    </view>
+    <view class="bo-bott">
+        <view class="bo-img">
+            <image class="xctsou-img" src="/icons/xcui1.png"></image>
+            <image class="XCimig" src="/icons/XC-PO.jpg"></image>
+            <view class="mattop">
+                <text>已报名驾校</text>
+            </view>
+        </view>
+        <view class="bo-img">
+            <image class="xctsou-img" src="/icons/xcui2.png"></image>
+            <view class="mattop">
+                <text>未报名驾校</text>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="xiayib">
+    <text>下一步</text>
+</view>

@@ -1,0 +1,58 @@
+<view class="forbox"   wx:for="{{wan}}" wx:key="index">
+    <view class="f-b-top">
+        <view class="uijkw">
+            <view class="top-tt">
+                <text>{{item.title}}</text>
+            </view>
+            <view class="t-bb-font">
+              <text>{{item.eachcar_num}}人一车 最快{{item.aquire_number}}天拿证</text>
+            </view>
+        </view>
+        <view class="sui-io">
+            <text>预约</text>
+        </view>
+    </view>
+    <view class="f-zopa">
+        <view>
+            <text>订单编号</text>
+            <text class="rigto">{{time.dingdan(item.time)}}</text>
+        </view>
+        <view>
+            <text>下单时间</text>
+            <text class="rigto">{{time.gettime(item.time)}}</text>
+        </view>
+        <view>
+            <text>订单金额</text>
+            <text class="rigto">￥ {{item.price}}</text>
+        </view>
+        <view>
+            <text>使用优惠券抵扣</text>
+            <text class="rigto">￥ 0{{item.coupons_price}}</text>
+        </view>
+        <view>
+            <text>实际支付金额</text>
+            <text class="rigto">￥ {{item.price}}</text>
+        </view>
+        <view>
+            <text>联系人</text>
+            <text class="rigto">{{item.name}}</text>
+        </view>
+        <view>
+            <text>手机号</text>
+            <text class="rigto">{{item.phone}}</text>
+        </view>
+        <view>
+            <text>支付方式</text>
+            <text class="rigto">线下支付</text>
+        </view>
+    </view>
+    <view class="f-boorr">
+        <view class="uijka">
+            <text>订单已完成</text>
+        </view>
+        <view class="iokwela">
+            <text>已完成</text>
+        </view>
+    </view>
+</view>
+<wxs module="time" src="/components/time.wxs"></wxs>

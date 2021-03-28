@@ -1,0 +1,5 @@
+<view class="gg-banner-wrap" wx:if="{{show}}">
+    <view bindtap="go_to_other" class="gg-banner">
+        <image src="{{messageData.imgURL}}"></image>
+    </view>
+</view>

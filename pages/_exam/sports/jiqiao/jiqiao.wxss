@@ -1,0 +1,50 @@
+.container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: #f5f6f7;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-size: 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sports {
+  background: #fff;
+}
+
+.sport-item {
+  padding: 0 20rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1px solid #d5d6d7;
+  font-size: 30rpx;
+}
+
+.sport-item:first-child {
+  border-top: 1px solid #d5d6d7;
+}
+
+.sport-item .icon {
+  width: 38rpx;
+  height: 38rpx;
+  vertical-align: middle;
+}
+
+.sport-item text {
+  vertical-align: middle;
+  margin-left: 20rpx;
+}
+
+.sport-item .arraw {
+  width: 14rpx;
+  height: 26rpx;
+  vertical-align: middle;
+  float: right;
+  margin-top: calc(40rpx - 13rpx);
+  margin-right: 8rpx;
+}

@@ -1,0 +1,115 @@
+page {
+  background-color: #F4F5F7;
+}
+
+.section-wrap {
+  background-color: #fff;
+  margin-bottom: 30rpx;
+}
+
+.section-title {
+  border-bottom: 1rpx solid #e0e0e0;
+}
+
+.title-icon {
+  width: 45rpx;
+  height: 45rpx;
+  padding: 20rpx;
+  border-bottom: 3rpx solid #3581f1;
+}
+
+.title {
+  font-size: 30rpx;
+  color: #333;
+}
+
+.more {
+  font-size: 28rpx;
+  color: #3581f1;
+  margin-right: 20rpx;
+}
+
+.more::after {
+  content: "";
+  width: 15rpx;
+  height: 15rpx;
+  border-right: 2rpx solid #3581f1;
+  border-bottom: 2rpx solid #3581f1;
+  transform: rotate(-45deg);
+}
+
+.sec-name {
+  font-size: 28rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.hotimg {
+  width: 32rpx;
+  height: 32rpx;
+  margin-left: 10rpx;
+}
+
+.sec-date {
+  font-size: 26rpx;
+  color: #666;
+}
+
+.timeimg {
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 10rpx;
+}
+
+.sec-date {
+  margin-top: 5rpx;
+  font-size: 26rpx;
+  color: #666;
+}
+
+.sec-read {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.btn-wrap {
+  width: 155rpx;
+  height: 50rpx;
+  line-height: 1;
+  position: relative;
+}
+
+.btn-text {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  line-height: 50rpx;
+  font-size: 26rpx;
+  color: #fff;
+}
+
+.arrow {
+  display: inline-block;
+  width: 15rpx;
+  height: 15rpx;
+  border-right: 2rpx solid #fff;
+  border-bottom: 2rpx solid #fff;
+  transform: rotate(-45deg);
+}
+
+.iujaaq {
+  width: 673rpx;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  padding: 20rpx;
+}
+
+.ikjka {
+  float: right;
+}
